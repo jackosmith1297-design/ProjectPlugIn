@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Project PlugIn - GUI Mockup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600&family=Special+Elite&family=Caveat:wght@500&display=swap');
+
+  :root {
+    --panel-dark: #1a1816;
+    --panel-mid: #252220;
+    --panel-light: #312d2a;
+    --metal-highlight: #4a4540;
+    --metal-shadow: #0a0908;
+    --amber: #d98e3e;
+    --amber-glow: #ffb15c;
+    --amber-dim: #6b4a26;
+    --cream: #e8dcc4;
+    --cream-dim: #a89c84;
+
+    /* Wood tones - used for the Classic character border */
+    --wood-light: #8a5a35;
+    --wood-mid: #6b4423;
+    --wood-dark: #432a16;
+    --wood-grain: #5a3a1f;
+
+    /* Modern character palette - luminous pastel mix */
+    --pastel-lavender: #b8a4e8;
+    --pastel-mint: #9eeed1;
+    --pastel-sky: #9ccdf0;
+    --pastel-peach: #f5c298;
+    --pastel-pink: #f0a8c8;
+    --pastel-lilac: #d4b3e8;
+
+    /* Modern panel surface - light, glassy, brushed-aluminium feel */
+    --modern-panel-light: #f4f3f6;
+    --modern-panel-mid: #e6e4ea;
+    --modern-panel-dark: #d6d3dc;
+    --modern-text-primary: #2e2c38;
+    --modern-text-secondary: #767288;
+    --modern-housing: #c9c6d2;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 40px;
+    background: #0c0b0a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Oswald', sans-serif;
+  }
+
+  .unit {
+    width: 720px;
+    background:
+      radial-gradient(ellipse 600px 400px at 50% 0%, rgba(255,255,255,0.025), transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      linear-gradient(160deg, var(--panel-light) 0%, var(--panel-dark) 55%, var(--panel-mid) 100%);
+    border-radius: 6px;
+    padding: 28px 32px 24px;
+    border: 14px solid transparent;
+    box-shadow:
+      0 30px 60px -20px rgba(0,0,0,0.8),
+      0 0 0 1px rgba(0,0,0,0.6),
+      inset 0 0 80px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.04);
+    position: relative;
+    transition: border-color 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+  }
+
+  /* CLASSIC: thick, richly-textured wood-grain frame around the whole
+     unit, evoking 1970s/80s hardware with real solid-wood side panels.
+     Layered grain at different angles/widths reads as more convincing
+     wood than a single repeating pattern would. */
+  .unit.classic-mode {
+    border-width: 26px;
+    border-image: repeating-linear-gradient(
+      97deg,
+      var(--wood-dark) 0px,
+      var(--wood-mid) 4px,
+      var(--wood-light) 7px,
+      var(--wood-mid) 10px,
+      var(--wood-grain) 14px,
+      var(--wood-dark) 19px,
+      var(--wood-mid) 23px,
+      var(--wood-light) 26px,
+      var(--wood-grain) 31px
+    ) 26;
+    box-shadow:
+      0 30px 60px -20px rgba(0,0,0,0.8),
+      0 0 0 1px rgba(0,0,0,0.6),
+      inset 0 0 80px rgba(0,0,0,0.35),
+      inset 0 1px 0 rgba(255,255,255,0.04),
+      0 0 0 3px rgba(43,26,14,0.5);
+  }
+
+  /* Extra grain fleck overlay on top of the wood border for realism -
+     small knots/variation so it doesn't read as a flat repeating pattern. */
+  .unit.classic-mode::before {
+    content: '';
+    position: absolute;
+    inset: -26px;
+    border-radius: 6px;
+    pointer-events: none;
+    background:
+      repeating-linear-gradient(
+        3deg,
+        rgba(0,0,0,0.08) 0px,
+        transparent 2px,
+        transparent 6px,
+        rgba(0,0,0,0.05) 7px
+      );
+    mix-blend-mode: multiply;
+    z-index: 0;
+  }
+
+  /* Perforated metal grille texture for Classic mode inner panel.
+     Applied via ::after so it sits above the base gradient but below
+     all content. Small 4px dots on a 7px grid — tight enough to read
+     as real punched steel rather than polka-dots. The solid fade at
+     the top covers the header text area so lettering stays legible. */
+  .unit.classic-mode::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 0;
+    background:
+      /* Solid fade at top — protects header text legibility */
+      linear-gradient(
+        180deg,
+        var(--panel-light) 0px,
+        var(--panel-light) 72px,
+        transparent 115px
+      ),
+      /* Fine perforated dot pattern — 1.6px hole on 7px grid */
+      radial-gradient(circle, rgba(0,0,0,0.65) 1.6px, transparent 1.6px);
+    background-size:
+      100% 100%,
+      7px 7px;
+  }
+
+  /* All direct children need z-index to sit above the grille overlay,
+     but elements with their own absolute positioning (screws, the
+     warning sticker, holo stickers) must keep that - forcing
+     "position: relative" onto them breaks their placement entirely. */
+  .unit.classic-mode > *:not(.screw):not(.warning-sticker):not(.holo-sticker) {
+    position: relative;
+    z-index: 1;
+  }
+  .unit.classic-mode > .screw,
+  .unit.classic-mode > .warning-sticker,
+  .unit.classic-mode > .holo-sticker {
+    z-index: 10;
+  }
+
+  /* MODERN: the whole unit flips to a light, glassy, brushed-aluminium
+     surface instead of dark charcoal - a genuinely different material
+     and mood, not just an accent colour change. Pastel neon glows read
+     as "futuristic light mode" against this pale base. */
+  .unit.modern-mode {
+    background:
+      radial-gradient(ellipse 500px 300px at 30% 0%, rgba(255,255,255,0.6), transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.012) 0px,
+        rgba(0,0,0,0.012) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      linear-gradient(160deg, var(--modern-panel-light) 0%, var(--modern-panel-mid) 55%, var(--modern-panel-dark) 100%);
+    box-shadow:
+      0 30px 60px -20px rgba(80,70,100,0.35),
+      0 0 0 1px rgba(255,255,255,0.5),
+      inset 0 0 60px rgba(255,255,255,0.4),
+      inset 0 1px 0 rgba(255,255,255,0.8);
+  }
+
+  /* All panel text/labels need to flip from light-on-dark to dark-on-light
+     when Modern's pale surface is active, or they'd become unreadable. */
+  .unit, .unit .brand, .unit .product-sub, .unit .model-plate,
+  .unit .section-label, .unit .meter-scale, .unit .meter-labels,
+  .unit .knob-name, .unit .knob-value, .unit .io-item, .unit .power-label,
+  .unit .switch-label-side, .unit .product-name, .unit .signature {
+    transition: color 0.5s ease;
+  }
+  .unit.modern-mode .product-name { color: var(--modern-text-primary); text-shadow: none; }
+  .unit.modern-mode .brand,
+  .unit.modern-mode .product-sub,
+  .unit.modern-mode .model-plate,
+  .unit.modern-mode .meter-scale,
+  .unit.modern-mode .meter-labels,
+  .unit.modern-mode .io-item,
+  .unit.modern-mode .power-label,
+  .unit.modern-mode .switch-label-side { color: var(--modern-text-secondary); }
+  .unit.modern-mode .section-label { color: var(--pastel-lilac); border-bottom-color: rgba(46,44,56,0.1); }
+  .unit.modern-mode .knob-name { color: var(--modern-text-primary); }
+  .unit.modern-mode .knob-value { color: var(--modern-text-secondary); }
+  .unit.modern-mode .model-plate .code { color: var(--pastel-pink); }
+  .unit.modern-mode .signature { color: var(--modern-text-secondary); opacity: 0.7; }
+  .unit.modern-mode .header { border-bottom-color: rgba(46,44,56,0.12); }
+  .unit.modern-mode .header::after { background: rgba(255,255,255,0.5); }
+
+  /* Screws */
+  .screw {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #6a6258, #2a2622 70%, #161412);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(0,0,0,0.4);
+    position: absolute;
+  }
+  .screw::after {
+    content: '';
+    position: absolute;
+    top: 50%; left: 15%;
+    width: 70%; height: 1.5px;
+    background: rgba(20,18,16,0.85);
+    transform: translateY(-50%) rotate(35deg);
+  }
+  .screw.tl { top: 14px; left: 14px; }
+  .screw.tr { top: 14px; right: 14px; }
+  .screw.bl { bottom: 14px; left: 14px; }
+  .screw.br { bottom: 14px; right: 14px; }
+
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 4px 28px 18px;
+    border-bottom: 1px solid rgba(0,0,0,0.5);
+    margin-bottom: 22px;
+    position: relative;
+    margin-left: -14px;
+    margin-right: -14px;
+    padding-left: 42px;
+    padding-right: 42px;
+  }
+  .header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px; left: 0; right: 0;
+    height: 1px;
+    background: rgba(255,255,255,0.04);
+  }
+
+  /* CLASSIC: the header sits on its own solid plate rather than directly
+     on the perforated grille, so the holes don't speckle through the
+     lettering. Mirrors how real hardware often has a separate solid
+     nameplate strip mounted above a grille section. */
+  .unit.classic-mode .header {
+    background: linear-gradient(180deg, #322e2b 0%, #211d1b 100%);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 2px 6px rgba(0,0,0,0.4);
+    border-radius: 3px 3px 0 0;
+  }
+
+  .brand {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .product-name {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--cream);
+    text-transform: uppercase;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.6), 0 0 18px rgba(217,142,62,0.08);
+  }
+  .product-sub {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--amber-dim);
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .model-plate {
+    text-align: right;
+    font-size: 10px;
+    color: var(--cream-dim);
+    letter-spacing: 1px;
+    line-height: 1.6;
+    padding-right: 4px;
+  }
+  .model-plate .code {
+    color: var(--amber);
+    font-weight: 500;
+  }
+
+  /* Main layout */
+  .body-grid {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 20px;
+    padding: 0 28px;
+    align-items: start;
+  }
+
+  .left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .section {
+    background: linear-gradient(180deg, rgba(0,0,0,0.18), rgba(0,0,0,0.32));
+    border-radius: 4px;
+    padding: 16px 18px 18px;
+    box-shadow:
+      inset 0 2px 6px rgba(0,0,0,0.5),
+      inset 0 0 0 1px rgba(255,255,255,0.02),
+      0 1px 0 rgba(255,255,255,0.03);
+    position: relative;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+
+  /* MODERN: sections become frosted glass panels - lighter, with a
+     soft white sheen, instead of recessed dark wells. */
+  .unit.modern-mode .section {
+    background: linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.25));
+    box-shadow:
+      inset 0 1px 3px rgba(150,140,170,0.25),
+      inset 0 0 0 1px rgba(255,255,255,0.6),
+      0 1px 0 rgba(255,255,255,0.4);
+  }
+
+  .section-label {
+    font-size: 10px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--amber-dim);
+    margin-bottom: 14px;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 8px;
+  }
+
+  /* VU Meter */
+  .meter-housing {
+    background: linear-gradient(180deg, #0a0908, #050404);
+    border-radius: 3px;
+    padding: 12px;
+    box-shadow: inset 0 0 12px rgba(0,0,0,0.8), inset 0 0 0 1px rgba(0,0,0,0.6);
+    margin-bottom: 16px;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .unit.modern-mode .meter-housing {
+    background: linear-gradient(180deg, #ffffff, var(--modern-housing));
+    box-shadow: inset 0 0 12px rgba(150,140,170,0.3), inset 0 0 0 1px rgba(255,255,255,0.7);
+  }
+
+  .meter-face {
+    background: linear-gradient(180deg, #2a2520 0%, #1c1813 100%);
+    border-radius: 2px;
+    padding: 10px 12px 6px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease;
+  }
+  .unit.modern-mode .meter-face {
+    background: linear-gradient(180deg, #fbfaff 0%, #ece9f2 100%);
+  }
+  .meter-face::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(217,142,62,0.12), transparent 70%);
+    pointer-events: none;
+    transition: background 0.5s ease;
+  }
+  .unit.modern-mode .meter-face::before {
+    background: radial-gradient(ellipse at 50% 0%, rgba(184,164,232,0.18), transparent 70%);
+  }
+
+  .meter-scale {
+    display: flex;
+    justify-content: space-between;
+    font-size: 8px;
+    color: var(--cream-dim);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .meter-bar-track {
+    height: 14px;
+    background: #0d0b09;
+    border-radius: 2px;
+    box-shadow: inset 0 1px 3px rgba(0,0,0,0.8);
+    display: flex;
+    gap: 2px;
+    padding: 2px;
+    position: relative;
+    z-index: 1;
+  }
+  .meter-led {
+    flex: 1;
+    border-radius: 1px;
+    background: #1a1612;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+  .unit.modern-mode .meter-led { background: #d8d4e0; }
+  .meter-led.lit-low { background: var(--amber-dim); }
+  .meter-led.lit-mid { background: var(--amber); box-shadow: 0 0 6px rgba(217,142,62,0.5); }
+  .meter-led.lit-hi { background: var(--amber-glow); box-shadow: 0 0 10px rgba(255,177,92,0.8); }
+
+  /* MODERN: meter glows in a cycling luminous pastel sequence instead
+     of amber, giving Modern its own colourful, contemporary identity. */
+  .unit.modern-mode .meter-led.lit-low { background: var(--pastel-lavender); box-shadow: 0 0 6px rgba(184,164,232,0.4); }
+  .unit.modern-mode .meter-led.lit-mid { background: var(--pastel-sky); box-shadow: 0 0 8px rgba(156,205,240,0.6); }
+  .unit.modern-mode .meter-led.lit-hi { background: var(--pastel-pink); box-shadow: 0 0 12px rgba(240,168,200,0.85); }
+
+  .meter-labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 9px;
+    color: var(--cream-dim);
+    letter-spacing: 1px;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Character Switch */
+  .switch-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 10px 0 4px;
+  }
+
+  .switch-label-side {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+  }
+  .switch-label-side.active { color: var(--amber-glow); text-shadow: 0 0 8px rgba(255,177,92,0.4); transition: color 0.4s, text-shadow 0.4s; }
+  .unit.modern-mode .switch-label-side.active { color: var(--pastel-lilac); text-shadow: 0 0 8px rgba(212,179,232,0.5); }
+
+  .toggle-track {
+    width: 64px;
+    height: 28px;
+    background: linear-gradient(180deg, #0d0b09, #1c1813);
+    border-radius: 14px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.7), inset 0 0 0 1px rgba(0,0,0,0.5);
+    position: relative;
+    cursor: pointer;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .unit.modern-mode .toggle-track {
+    background: linear-gradient(180deg, #e8e5ee, #f5f3f8);
+    box-shadow: inset 0 2px 4px rgba(160,150,180,0.3), inset 0 0 0 1px rgba(255,255,255,0.6);
+  }
+  .toggle-knob {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 30%, #4a4540, #221f1c 75%);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.06), 0 0 8px rgba(217,142,62,0.3);
+    position: absolute;
+    top: 2px;
+    left: 38px;
+    transition: left 0.2s ease, box-shadow 0.4s ease;
+  }
+  .toggle-track.classic .toggle-knob { left: 2px; }
+
+  .unit.modern-mode .toggle-knob {
+    background: radial-gradient(circle at 35% 30%, #ffffff, #d4cfe0 75%);
+    box-shadow: 0 2px 4px rgba(120,110,140,0.3), inset 0 0 0 1px rgba(255,255,255,0.7), 0 0 10px rgba(212,179,232,0.6);
+  }
+
+  /* Knobs */
+  .knob-row {
+    display: flex;
+    justify-content: space-around;
+    padding: 6px 0 10px;
+    gap: 8px;
+  }
+  .knob-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  .knob-wrap {
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: linear-gradient(155deg, #6b6358, #2c2824 60%, #1a1714);
+    box-shadow:
+      0 5px 10px rgba(0,0,0,0.65),
+      0 1px 0 rgba(255,255,255,0.06),
+      inset 0 0 0 1px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .unit.modern-mode .knob-wrap {
+    background: linear-gradient(155deg, #ffffff, var(--modern-housing) 60%, #b8b4c2);
+    box-shadow:
+      0 5px 10px rgba(120,110,140,0.3),
+      0 1px 0 rgba(255,255,255,0.8),
+      inset 0 0 0 1px rgba(255,255,255,0.6);
+  }
+  .knob {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 38% 32%, #4a443c 0%, #28241f 50%, #161412 100%);
+    box-shadow:
+      inset 0 0 0 1px rgba(0,0,0,0.6),
+      inset 0 -3px 5px rgba(0,0,0,0.5),
+      inset 0 2px 3px rgba(255,255,255,0.04);
+    position: relative;
+    transition: background 0.5s ease, box-shadow 0.5s ease;
+  }
+  .unit.modern-mode .knob {
+    background:
+      radial-gradient(circle at 38% 32%, #f6f4f9 0%, #e2dee9 50%, #cdc8d6 100%);
+    box-shadow:
+      inset 0 0 0 1px rgba(180,170,195,0.5),
+      inset 0 -3px 5px rgba(170,160,185,0.25),
+      inset 0 2px 3px rgba(255,255,255,0.7);
+  }
+  .knob::before {
+    /* indicator line */
+    content: '';
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    width: 3px;
+    height: 18px;
+    background: linear-gradient(180deg, var(--amber-glow), var(--amber));
+    border-radius: 2px;
+    transform-origin: 50% 24px;
+    box-shadow: 0 0 4px rgba(255,177,92,0.6);
+    transition: background 0.4s, box-shadow 0.4s;
+  }
+
+  /* MODERN: each knob's indicator gets its own pastel hue, rather than
+     uniform amber, reinforcing Modern's colourful, varied identity. */
+  .unit.modern-mode .knob-unit:nth-child(1) .knob::before {
+    background: linear-gradient(180deg, var(--pastel-mint), #5fcf9e);
+    box-shadow: 0 0 6px rgba(158,238,209,0.7);
+  }
+  .unit.modern-mode .knob-unit:nth-child(2) .knob::before {
+    background: linear-gradient(180deg, var(--pastel-sky), #6bade0);
+    box-shadow: 0 0 6px rgba(156,205,240,0.7);
+  }
+  .unit.modern-mode .knob-unit:nth-child(3) .knob::before {
+    background: linear-gradient(180deg, var(--pastel-peach), #e89a5c);
+    box-shadow: 0 0 6px rgba(245,194,152,0.7);
+  }
+  .knob.pos-low::before { transform: translateX(-50%) rotate(-110deg); }
+  .knob.pos-mid::before { transform: translateX(-50%) rotate(0deg); }
+  .knob.pos-high::before { transform: translateX(-50%) rotate(110deg); }
+
+  .knob-ticks {
+    position: absolute;
+    inset: -8px;
+  }
+  .knob-ticks span {
+    position: absolute;
+    width: 2px;
+    height: 6px;
+    background: var(--cream-dim);
+    opacity: 0.5;
+    left: 50%;
+    top: 0;
+    transform-origin: 50% 40px;
+  }
+
+  .knob-name {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--cream);
+  }
+  .knob-value {
+    font-size: 9px;
+    color: var(--amber-dim);
+    letter-spacing: 1px;
+  }
+
+  /* Input labels */
+  .io-row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  .io-item {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .io-led {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--amber);
+    box-shadow: 0 0 5px rgba(217,142,62,0.7);
+    transition: background 0.4s, box-shadow 0.4s;
+  }
+  .unit.modern-mode .io-led {
+    background: var(--pastel-lilac);
+    box-shadow: 0 0 6px rgba(212,179,232,0.7);
+  }
+
+  /* Footer / signature */
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 18px 28px 4px;
+    margin-top: 8px;
+  }
+  .power-led-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .power-led {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--amber-glow), var(--amber) 70%);
+    box-shadow: 0 0 8px rgba(255,177,92,0.9), 0 0 16px rgba(255,177,92,0.4);
+    transition: background 0.4s, box-shadow 0.4s;
+  }
+  .unit.modern-mode .power-led {
+    background: radial-gradient(circle, var(--pastel-mint), var(--pastel-sky) 70%);
+    box-shadow: 0 0 8px rgba(158,238,209,0.9), 0 0 16px rgba(156,205,240,0.4);
+  }
+  .power-label {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    color: var(--cream-dim);
+    text-transform: uppercase;
+  }
+
+  .signature {
+    font-family: 'Caveat', cursive;
+    font-size: 22px;
+    color: var(--cream-dim);
+    opacity: 0.65;
+    transform: rotate(-3deg);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     BRUSHED METAL BASE — dark horizontal grain for Classic,
+     already handled by existing gradient; we add fine
+     horizontal stroke lines for convincing brushing.
+     ═══════════════════════════════════════════════════════ */
+  .unit.classic-mode {
+    background-image:
+      /* Amber ambient glow pooling from centre-bottom */
+      radial-gradient(ellipse 420px 180px at 50% 105%, rgba(217,142,62,0.13), transparent 70%),
+      /* Fine horizontal brush strokes */
+      repeating-linear-gradient(
+        180deg,
+        transparent 0px,
+        transparent 2px,
+        rgba(255,255,255,0.018) 2px,
+        rgba(255,255,255,0.018) 3px
+      ),
+      radial-gradient(ellipse 600px 400px at 50% 0%, rgba(255,255,255,0.025), transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(255,255,255,0.015) 0px,
+        rgba(255,255,255,0.015) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      linear-gradient(160deg, var(--panel-light) 0%, var(--panel-dark) 55%, var(--panel-mid) 100%);
+  }
+
+  .unit.modern-mode {
+    background-image:
+      /* Pastel HUD glow from top */
+      radial-gradient(ellipse 500px 200px at 50% -10%, rgba(156,205,240,0.18), transparent 65%),
+      /* Fine horizontal brush on light panel */
+      repeating-linear-gradient(
+        180deg,
+        transparent 0px,
+        transparent 3px,
+        rgba(0,0,0,0.022) 3px,
+        rgba(0,0,0,0.022) 4px
+      ),
+      radial-gradient(ellipse 500px 300px at 30% 0%, rgba(255,255,255,0.6), transparent 70%),
+      repeating-linear-gradient(
+        90deg,
+        rgba(0,0,0,0.012) 0px,
+        rgba(0,0,0,0.012) 1px,
+        transparent 1px,
+        transparent 3px
+      ),
+      linear-gradient(160deg, var(--modern-panel-light) 0%, var(--modern-panel-mid) 55%, var(--modern-panel-dark) 100%);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     AMBER LED GLOW — warm pools of light under knob section
+     and around meter on Classic; pastel equivalent on Modern.
+     ═══════════════════════════════════════════════════════ */
+  .knob-wrap {
+    position: relative;
+  }
+  .knob-wrap::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 18px;
+    background: radial-gradient(ellipse, rgba(217,142,62,0.45), transparent 70%);
+    pointer-events: none;
+    border-radius: 50%;
+    transition: background 0.5s;
+  }
+  .unit.modern-mode .knob-wrap::after {
+    background: radial-gradient(ellipse, rgba(184,164,232,0.4), transparent 70%);
+  }
+  /* Amber pool under the whole controls section */
+  .unit.classic-mode .section:last-child {
+    box-shadow:
+      inset 0 2px 6px rgba(0,0,0,0.5),
+      inset 0 0 0 1px rgba(255,255,255,0.02),
+      0 1px 0 rgba(255,255,255,0.03),
+      0 0 24px rgba(217,142,62,0.08);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     HUD GRID — Modern only. Faint cyan perspective grid in
+     the panel background, visible between sections.
+     ═══════════════════════════════════════════════════════ */
+  .unit.modern-mode::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.55;
+    background-image:
+      linear-gradient(rgba(100,200,240,0.12) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(100,200,240,0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     VINTAGE DECALS — Classic only.
+     Small worn transfer-print graphics on the panel.
+     ═══════════════════════════════════════════════════════ */
+  .decal-group {
+    position: absolute;
+    pointer-events: none;
+  }
+  /* Frequency response curve stamp — lower-left of panel */
+  .decal-freq {
+    bottom: 58px;
+    left: 36px;
+    width: 64px;
+    height: 28px;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .unit.classic-mode .decal-freq { opacity: 1; }
+
+  /* HAND CALIBRATED rubber stamp */
+  .decal-stamp {
+    top: 90px;
+    right: 44px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    transform: rotate(-8deg);
+  }
+  .unit.classic-mode .decal-stamp { opacity: 1; }
+  .decal-stamp-inner {
+    border: 1.5px solid rgba(180,140,80,0.45);
+    border-radius: 2px;
+    padding: 3px 7px;
+    font-family: 'Special Elite', serif;
+    font-size: 7.5px;
+    color: rgba(180,140,80,0.5);
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  /* Certification roundel */
+  .decal-cert {
+    bottom: 56px;
+    right: 38px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1.5px solid rgba(160,130,70,0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+  .unit.classic-mode .decal-cert { opacity: 1; }
+  .decal-cert-text {
+    font-family: 'Special Elite', serif;
+    font-size: 5.5px;
+    color: rgba(160,130,70,0.4);
+    letter-spacing: 0.5px;
+    text-align: center;
+    line-height: 1.3;
+    text-transform: uppercase;
+  }
+
+  /* ═══════════════════════════════════════════════════════
+     HOLOGRAPHIC STICKERS — Modern only.
+     Two small iridescent stickers on the panel surface.
+     ═══════════════════════════════════════════════════════ */
+  .holo-sticker {
+    pointer-events: none;
+    border-radius: 3px;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s, max-height 0.5s;
+  }
+  .unit.modern-mode .holo-sticker { opacity: 1; }
+  .unit.modern-mode .holo-sticker-1 { max-height: 18px; }
+
+  /* Sticker 2 (the small circular mark) still floats freely over the
+     panel surface, so it keeps absolute positioning. */
+  .holo-sticker-2 { position: absolute; }
+
+  /* Sticker 1 — rectangular holographic foil badge. Now lives in
+     normal document flow (placed directly after the Character section
+     in the HTML) rather than absolute positioning, so it naturally
+     sits in the gap above Power without fragile pixel offsets. */
+  .holo-sticker-1 {
+    position: static;
+    width: 72px;
+    height: 18px;
+    margin: 10px 0 0 0px;
+    background: linear-gradient(
+      105deg,
+      rgba(255,100,200,0.7) 0%,
+      rgba(100,200,255,0.7) 25%,
+      rgba(180,255,150,0.7) 50%,
+      rgba(255,200,80,0.7) 75%,
+      rgba(200,100,255,0.7) 100%
+    );
+    border-radius: 2px;
+    box-shadow: 0 0 8px rgba(180,164,232,0.4), inset 0 0 0 0.5px rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+  }
+  .holo-sticker-1::before {
+    content: 'LIMITED EDITION';
+    font-family: 'Oswald', sans-serif;
+    font-size: 6px;
+    letter-spacing: 1px;
+    color: rgba(0,0,0,0.55);
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  .holo-sticker-1::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(255,255,255,0.4) 0%,
+      transparent 40%,
+      rgba(255,255,255,0.15) 60%,
+      transparent 100%
+    );
+  }
+
+  /* Sticker 2 — small hexagonal-ish "VERIFIED" foil badge */
+  .holo-sticker-2 {
+    bottom: 60px;
+    right: 38px;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: conic-gradient(
+      rgba(255,100,200,0.8),
+      rgba(100,200,255,0.8),
+      rgba(180,255,150,0.8),
+      rgba(255,200,80,0.8),
+      rgba(200,100,255,0.8),
+      rgba(255,100,200,0.8)
+    );
+    box-shadow: 0 0 10px rgba(180,164,232,0.5), inset 0 0 0 0.5px rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .holo-sticker-2::before {
+    content: '✦';
+    font-size: 12px;
+    color: rgba(255,255,255,0.8);
+    text-shadow: 0 0 4px rgba(255,255,255,0.9);
+    z-index: 1;
+  }
+
+  /* Note: an earlier iteration replaced the plain signature with an
+     engraved "serial plate" badge showing a fake serial number. Per
+     the original brief, the signature should stay a small, subtle,
+     handwritten script - tasteful, not a branding/serial element - so
+     that approach has been removed and the plain .signature style
+     (further up this file) is used instead. */
+
+  /* ═══════════════════════════════════════════════════════
+     WARNING STICKER — top-right corner, under model plate.
+     Classic: worn vintage inspection label — kraft paper,
+       faded serif type, double ruled border. Feels like a
+       real factory QC sticker from 1974, not a hazard sign.
+     Modern: red holographic film with edge glow.
+     Both modes same size and position.
+     ═══════════════════════════════════════════════════════ */
+  .warning-sticker {
+    position: absolute;
+    top: 100px;
+    right: 32px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 6px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 3px 7px;
+    white-space: nowrap;
+    z-index: 10;
+    transition: background 0.4s, box-shadow 0.4s, color 0.4s, transform 0.4s;
+  }
+
+  /* Classic: worn kraft-paper QC inspection label —
+     same compact size as Modern. Special Elite type in faded
+     ink, double-rule border, aged cream. Factory stamp energy,
+     not alarming — something that's always been there. */
+  .unit.classic-mode .warning-sticker {
+    font-family: 'Special Elite', serif;
+    font-size: 6px;
+    letter-spacing: 1px;
+    color: rgba(55, 35, 8, 0.72);
+    background: linear-gradient(135deg, #d6c89e, #c9bb85, #d2c08e);
+    border: 1px solid rgba(90, 62, 18, 0.4);
+    box-shadow:
+      0 0 0 1.5px rgba(80, 55, 15, 0.2),
+      0 1px 3px rgba(0,0,0,0.28),
+      inset 0 0 5px rgba(0,0,0,0.06);
+    transform: rotate(0.8deg);
+    border-radius: 1px;
+  }
+
+  /* Modern: soft holographic pastel film with glow - a calm status
+     confirmation, not an alarm colour, since this just confirms the
+     effect is on rather than signalling a fault. */
+  .unit.modern-mode .warning-sticker {
+    color: rgba(46,44,56,0.85);
+    background: linear-gradient(
+      105deg,
+      rgba(184,164,232,0.85) 0%,
+      rgba(156,205,240,0.85) 50%,
+      rgba(240,168,200,0.85) 100%
+    );
+    border-radius: 2px;
+    box-shadow:
+      0 0 8px rgba(184,164,232,0.4),
+      inset 0 0 0 0.5px rgba(255,255,255,0.6);
+    transform: rotate(0deg);
+  }
+
+  /* Show the correct wording span for the active character */
+  .warning-sticker .ws-classic { display: inline; }
+  .warning-sticker .ws-modern  { display: none; }
+  .unit.modern-mode .warning-sticker .ws-classic { display: none; }
+  .unit.modern-mode .warning-sticker .ws-modern  { display: inline; }
+
+</style>
+</head>
+<body>
+
+<div class="unit classic-mode">
+  <div class="screw tl"></div>
+  <div class="screw tr"></div>
+  <div class="screw bl"></div>
+  <div class="screw br"></div>
+
+  <div class="header">
+    <div>
+      <div class="brand">Smith&ndash;Pye Audio</div>
+      <div class="product-name">Project PlugIn</div>
+      <div class="product-sub">Vocal &middot; Vocoder &middot; Synthesis</div>
+    </div>
+    <div class="model-plate">
+      MODEL <span class="code">PV&#8209;01</span><br>
+      ANALOGUE&nbsp;VOICE&nbsp;PROCESSOR
+    </div>
+  </div>
+
+  <div class="body-grid">
+    <!-- LEFT: Character + Meter -->
+    <div class="left-column">
+      <div class="section">
+        <div class="section-label">Signal Level</div>
+        <div class="meter-housing">
+          <div class="meter-face">
+            <div class="meter-scale"><span>-30</span><span>-20</span><span>-10</span><span>-3</span><span>0</span></div>
+            <div class="meter-bar-track" id="meterTrack"></div>
+            <div class="meter-labels"><span>VOICE</span><span>dB</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <div class="section-label">Character</div>
+        <div class="switch-row">
+          <span class="switch-label-side active" id="classicLabel">Classic</span>
+          <div class="toggle-track classic" id="charToggle">
+            <div class="toggle-knob"></div>
+          </div>
+          <span class="switch-label-side" id="modernLabel">Modern</span>
+        </div>
+      </div>
+
+      <!-- Holographic sticker (Modern only) - lives in normal document
+           flow here so it naturally sits below the Character section
+           and above the Power row, rather than relying on fragile
+           absolute-position pixel offsets that drift if anything
+           else on the panel changes. -->
+      <div class="holo-sticker holo-sticker-1"></div>
+    </div>
+
+    <!-- RIGHT: Knobs -->
+    <div class="section">
+      <div class="section-label">Controls</div>
+      <div class="knob-row">
+        <div class="knob-unit">
+          <div class="knob-wrap">
+            <div class="knob pos-high"></div>
+          </div>
+          <div class="knob-name">Strength</div>
+          <div class="knob-value">85%</div>
+        </div>
+        <div class="knob-unit">
+          <div class="knob-wrap">
+            <div class="knob pos-mid"></div>
+          </div>
+          <div class="knob-name">Dry / Wet</div>
+          <div class="knob-value">100%</div>
+        </div>
+        <div class="knob-unit">
+          <div class="knob-wrap">
+            <div class="knob pos-low"></div>
+          </div>
+          <div class="knob-name">Output</div>
+          <div class="knob-value">0.0 dB</div>
+        </div>
+      </div>
+
+      <div class="io-row">
+        <div class="io-item"><span class="io-led"></span>Voice In</div>
+        <div class="io-item"><span class="io-led"></span>Carrier In</div>
+        <div class="io-item"><span class="io-led"></span>Output</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Vintage decals (Classic only) -->
+    <!-- Holographic sticker 2 (Modern only) -->
+  <div class="holo-sticker holo-sticker-2"></div>
+
+  <!-- Status sticker — top-right corner, mode-styled. Confirms the
+       vocoder effect is engaged; this is a status indicator, not a
+       fault warning, so the wording avoids anything alarm-sounding. -->
+  <!-- Status sticker — top-right corner, mode-styled. Classic keeps
+       calm "Vocoder Engaged" QC-stamp wording; Modern uses the bolder
+       "Voice Distortion Activated" to match its punchier personality -
+       both are styled calmly (no warning triangle/alarm colour) since
+       this confirms the effect is on, not signalling a fault. -->
+  <div class="warning-sticker">
+    <span class="ws-classic">Vocoder Engaged</span>
+    <span class="ws-modern">Voice Distortion Activated</span>
+  </div>
+
+  <div class="footer">
+    <div class="power-led-group">
+      <div class="power-led"></div>
+      <div class="power-label">Power</div>
+    </div>
+    <div class="signature">Smith&ndash;Pye</div>
+  </div>
+</div>
+
+<script>
+  // Build meter LEDs with an initial lit state visible immediately
+  const track = document.getElementById('meterTrack');
+  const numLeds = 28;
+  const initialLevel = 16;
+  for (let i = 0; i < numLeds; i++) {
+    const led = document.createElement('div');
+    led.className = 'meter-led';
+    if (i < initialLevel) {
+      if (i < numLeds * 0.6) led.classList.add('lit-low');
+      else if (i < numLeds * 0.85) led.classList.add('lit-mid');
+      else led.classList.add('lit-hi');
+    }
+    track.appendChild(led);
+  }
+
+  // Animate meter to simulate a live vocal signal (mockup only)
+  let phase = 0;
+  function animateMeter() {
+    phase += 0.12;
+    const base = 14 + Math.sin(phase) * 6 + Math.sin(phase * 2.7) * 4;
+    const level = Math.max(2, Math.min(numLeds, Math.round(base + (Math.random() * 3))));
+    const leds = track.children;
+    for (let i = 0; i < leds.length; i++) {
+      leds[i].className = 'meter-led';
+      if (i < level) {
+        if (i < numLeds * 0.6) leds[i].classList.add('lit-low');
+        else if (i < numLeds * 0.85) leds[i].classList.add('lit-mid');
+        else leds[i].classList.add('lit-hi');
+      }
+    }
+    requestAnimationFrame(animateMeter);
+  }
+  animateMeter();
+
+  // Character toggle interaction
+  const toggle = document.getElementById('charToggle');
+  const classicLabel = document.getElementById('classicLabel');
+  const modernLabel = document.getElementById('modernLabel');
+  const unitEl = document.querySelector('.unit');
+
+  function setCharacter(isClassic) {
+    toggle.classList.toggle('classic', isClassic);
+    classicLabel.classList.toggle('active', isClassic);
+    modernLabel.classList.toggle('active', !isClassic);
+    unitEl.classList.toggle('classic-mode', isClassic);
+    unitEl.classList.toggle('modern-mode', !isClassic);
+  }
+
+  toggle.addEventListener('click', () => {
+    const isCurrentlyClassic = toggle.classList.contains('classic');
+    setCharacter(!isCurrentlyClassic);
+  });
+
+  // Start in Classic mode by default, matching the initial switch position.
+  setCharacter(true);
+</script>
+
+</body>
+</html>
