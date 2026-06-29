@@ -1,0 +1,30 @@
+dependencies: \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/system/juce_TargetPlatform.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/system/juce_CompilerWarnings.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUBase.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUBuffer.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUUtility.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUInputElement.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUScopeElement.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/ComponentBase.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUMIDIUtility.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUOutputElement.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUPlugInDispatch.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUBuffer.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUBufferAllocator.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUEffectBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUEffectBase.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUSilentTimeout.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUInputElement.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUMIDIBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUMIDIBase.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUMIDIEffectBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUMIDIEffectBase.h \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUOutputElement.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUPlugInDispatch.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/AUScopeElement.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/ComponentBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/MusicDeviceBase.cpp \
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU/AudioUnitSDK/MusicDeviceBase.h

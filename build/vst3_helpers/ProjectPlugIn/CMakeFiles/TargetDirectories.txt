@@ -1,0 +1,3 @@
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/CMakeFiles/vst3_helper.dir
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/CMakeFiles/ALL_BUILD.dir
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/CMakeFiles/ZERO_CHECK.dir

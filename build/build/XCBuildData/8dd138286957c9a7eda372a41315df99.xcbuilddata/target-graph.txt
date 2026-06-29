@@ -1,0 +1,18 @@
+Target dependency graph (6 targets)
+Target 'ALL_BUILD' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn_AU' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn_VST3' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'ProjectPlugIn'
+Target 'ProjectPlugIn_VST3' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn_vst3_helper' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'ProjectPlugIn'
+Target 'ProjectPlugIn_vst3_helper' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'ProjectPlugIn'
+Target 'ProjectPlugIn_AU' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ProjectPlugIn' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'ProjectPlugIn'
+Target 'ProjectPlugIn' in project 'ProjectPlugIn'
+➜ Explicit dependency on target 'ZERO_CHECK' in project 'ProjectPlugIn'
+Target 'ZERO_CHECK' in project 'ProjectPlugIn' (no dependencies)

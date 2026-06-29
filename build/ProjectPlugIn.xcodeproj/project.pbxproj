@@ -1,0 +1,2244 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		26005AF08334FDF82CAB62E5 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = A9D820AD4CF84F93806567AF /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				B9508F34F91D4C578749971E /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 672A00C7D6D84114B5C9A845 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				9B7F48A4620F2358D043CCA4 /* Generate CMakeFiles/ZERO_CHECK */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B71E9FF21D4AB5F28C8424FE /* ProjectPlugIn_All */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = FAD7A41480DC4A7B907CF97A /* Build configuration list for PBXAggregateTarget "ProjectPlugIn_All" */;
+			buildPhases = (
+			);
+			dependencies = (
+				12C54A874BDA416CBBB36E94 /* PBXTargetDependency */,
+				BC218B899F1145F2BFB6BCE0 /* PBXTargetDependency */,
+				C2A51C8F72004A649B3F642A /* PBXTargetDependency */,
+			);
+			name = ProjectPlugIn_All;
+			productName = ProjectPlugIn_All;
+		};
+		D7DCF0C02D7E74883E348691 /* ProjectPlugIn_vst3_helper */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AEC2BF030FCA4C94BBA37A51 /* Build configuration list for PBXAggregateTarget "ProjectPlugIn_vst3_helper" */;
+			buildPhases = (
+				B5FA8B1CD671AEE12D5429C1 /* Generate CMakeFiles/ProjectPlugIn_vst3_helper */,
+			);
+			dependencies = (
+				E87A53882CB94F53939BA6FD /* PBXTargetDependency */,
+			);
+			name = ProjectPlugIn_vst3_helper;
+			productName = ProjectPlugIn_vst3_helper;
+		};
+		FEED3629555C673188169929 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 0FC785C51E034DC8983385C0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				F8FD25524CCD13BA331FA336 /* Generate CMakeFiles/ALL_BUILD */,
+			);
+			dependencies = (
+				7C472EFA253E4456A77A1DD1 /* PBXTargetDependency */,
+				22DD339E64B0498BB6BD0460 /* PBXTargetDependency */,
+				F44715147CE043629BE72DBD /* PBXTargetDependency */,
+				48F6B82222B34703938CE167 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		01BF2BF6B1BD4A788F45F8C7 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/OutputStage.cpp */ = {isa = PBXBuildFile; fileRef = 5135F730B230410FBD5699D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/OutputStage.cpp */; };
+		06C62A305EEF46F49FE14A05 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */ = {isa = PBXBuildFile; fileRef = 67B9F732BEC44C5D8B95FE05 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */; };
+		0A049D3DC95243BAA44D6EAF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp */ = {isa = PBXBuildFile; fileRef = DF06C75F371C439187DABE43 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp */; };
+		0D9F02DCA3D1458F98BD608D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 7CEF01D4D155412AB0D671D5 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */; };
+		0F1EFF0399A744CDA57B5610 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo.rule */ = {isa = PBXBuildFile; fileRef = D3BDACEF72864BABB2B02408 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo.rule */; };
+		0F7ED680642642F28CB990EA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXBuildFile; fileRef = 525C3049BBC54774BECC3776 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */; };
+		1449AC1F63F04FA58A7DEDB4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp */ = {isa = PBXBuildFile; fileRef = 97A93F3E9DA242458F9AF9EC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp */; };
+		1817F225CC3648AE85418664 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics.mm */ = {isa = PBXBuildFile; fileRef = E5174284F1FD4AC2821C4A28 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics.mm */; };
+		1AA99DCD392E4C6AA9FE33D4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c */ = {isa = PBXBuildFile; fileRef = 1402528B4F954A06BAD00073 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c */; };
+		1AB9BA6CB41B4188962B400F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core_CompilationTime.cpp */ = {isa = PBXBuildFile; fileRef = 3B9D8286CDA34D53B2C93F68 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core_CompilationTime.cpp */; };
+		1B2335D6BEDF441FB8E82FFC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_data_structures/juce_data_structures.mm */ = {isa = PBXBuildFile; fileRef = 48A9545D2BCD4647921629C0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_data_structures/juce_data_structures.mm */; };
+		1B8D099685764EB4B2A60514 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = B009267D76CB4E4EB2ECC35D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */; };
+		28B67CAE553541168078799E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors/juce_audio_processors.mm */ = {isa = PBXBuildFile; fileRef = D93C733273064D30AF3643C2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors/juce_audio_processors.mm */; };
+		2CAB7D9B41F445E3973BF423 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */ = {isa = PBXBuildFile; fileRef = 43C46CA4A2334C86A9E48154 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */; };
+		30F730BBBDFF49FDB7EFC9EC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXBuildFile; fileRef = E335AB8591DF45F3860BB9DD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */; };
+		3AA14192223B4C459835BB79 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */ = {isa = PBXBuildFile; fileRef = A7C8458A9D6D4CB690210040 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */; };
+		3B406384BCFA48E9968BABBC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp */ = {isa = PBXBuildFile; fileRef = 25CC0432355C45A58DB6DD3F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp */; };
+		3BA8525FD60649FD80462FC2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXBuildFile; fileRef = 9968F0602FE84E49A74B810A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */; };
+		4B9145526D66425CB07AF8C3 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */ = {isa = PBXBuildFile; fileRef = 676C9484A13B49DA81EF6388 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */; };
+		5B641530BAD049F587DA34DD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics.mm */ = {isa = PBXBuildFile; fileRef = 707D6B9536944DCCB0BB8E65 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics.mm */; };
+		5E0189DD840E480495F6E1AA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp */ = {isa = PBXBuildFile; fileRef = DB24D866C4284EC89DFD2D39 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp */; };
+		6409F22E1C584918A19D264C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */ = {isa = PBXBuildFile; fileRef = 52A92C0745B245788A05A290 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */; };
+		6438A00E18484B8F933481C1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */ = {isa = PBXBuildFile; fileRef = 0EEFB9B25C0C4C7986436FC6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */; };
+		68CC1F87484143C69AE3255C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp */ = {isa = PBXBuildFile; fileRef = 5DA842EE9F2B4966B6BD601A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp */; };
+		6A507810E3FF4493844628FC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */ = {isa = PBXBuildFile; fileRef = 73918907F0ED4976904E76D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */; };
+		6B136C9C613D4373AEB0ED3D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_extra/juce_gui_extra.mm */ = {isa = PBXBuildFile; fileRef = 14486334C59545C9B1FBC50F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_extra/juce_gui_extra.mm */; };
+		72328D3BFC1E4AD08BF188BE /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp */ = {isa = PBXBuildFile; fileRef = CFA04238A5D0469C886B77DB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp */; };
+		72D1EBEC80A94B46A86C712C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core.mm */ = {isa = PBXBuildFile; fileRef = 4FF569C9A60648F5984D3AD1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core.mm */; };
+		72EE279E33324AA5AC699008 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderEngine.cpp */ = {isa = PBXBuildFile; fileRef = E474B44F191E49D1A501B0D3 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderEngine.cpp */; };
+		75398C4FF6A5411CB59EF53A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */ = {isa = PBXBuildFile; fileRef = 2593BEBDFA734C40838EB1AB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */; };
+		7A7531A065124546B38386AB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_utils/juce_audio_utils.mm */ = {isa = PBXBuildFile; fileRef = 881DA4E4318A46759B3AB2D4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_utils/juce_audio_utils.mm */; };
+		86FC028E3995435F908D5BE4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */ = {isa = PBXBuildFile; fileRef = 0A79AB522A2248E7B14B00C9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */; };
+		8D0DDEE46BE0403AA7A16AF1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_dsp/juce_dsp.mm */ = {isa = PBXBuildFile; fileRef = 5A431867F2A34F46A7541DC8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_dsp/juce_dsp.mm */; };
+		988EE8CF8DE04A8EB1E74457 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */ = {isa = PBXBuildFile; fileRef = 1EB70890CEC644EBAD20C560 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */; };
+		A58BC25478E34E04B35DEA86 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_events/juce_events.mm */ = {isa = PBXBuildFile; fileRef = 27E30B8509FA4C7C9A3F1B45 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_events/juce_events.mm */; };
+		AAFC6C82D92B43D1AA46364A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */ = {isa = PBXBuildFile; fileRef = 371BEE6D76624C67915FCDD9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */; };
+		AEC5CC8E5783429B9F6CB69F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */ = {isa = PBXBuildFile; fileRef = B3B628A56849447E9EDFB74C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */; };
+		B01501D0886E43B882C4D033 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm */ = {isa = PBXBuildFile; fileRef = 78F08310E03D40439F7BF0A8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm */; };
+		B05D32E8A36E4E4491AF2AC2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */ = {isa = PBXBuildFile; fileRef = 98F4A50D4DA84FECB1B887E1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */; };
+		C3520EB5A42A4DD494210A09 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = D5340AB567F14AC78DEFC81D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */; };
+		CAEFBE8EEFCE4FF1850667DA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */ = {isa = PBXBuildFile; fileRef = E600870B2155468FBE410EE2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */; };
+		CB7B8C57294E45658C06D44C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 151E94B949B84E4BB8CE1B04 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */; };
+		CBB0E4D2905C4872815F1885 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */ = {isa = PBXBuildFile; fileRef = 5631FC0A93F441D684EB56F6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */; };
+		CC169A879B934C15A2B366CD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */ = {isa = PBXBuildFile; fileRef = 7EE3762793724F3FA06D533E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */; };
+		CF466391DF824EAE96FFDA68 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginEditor.cpp */ = {isa = PBXBuildFile; fileRef = 4112AFB115CE449A8B4AC8A0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginEditor.cpp */; };
+		D0CC9A67EDEA47849CE8D4BD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */ = {isa = PBXBuildFile; fileRef = 1BD524D940AB494E9E1D2AB4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */; };
+		D26A5272C5D1406297BC3836 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_basics/juce_audio_basics.mm */ = {isa = PBXBuildFile; fileRef = CA2C3BCD916F42A3814F212A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_basics/juce_audio_basics.mm */; };
+		D6B82F8D0965496AAD04FC50 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_devices/juce_audio_devices.mm */ = {isa = PBXBuildFile; fileRef = 218E85E7B17C41ABBE27ECBD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_devices/juce_audio_devices.mm */; };
+		D84C2D3EBB2B433F920C7FC0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_formats/juce_audio_formats.mm */ = {isa = PBXBuildFile; fileRef = 7227AC1077914002A78D6476 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_formats/juce_audio_formats.mm */; };
+		D90B85E1F75E44FA9FA67422 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp */ = {isa = PBXBuildFile; fileRef = CC43D7DFE6044D65AFA98D7E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp */; };
+		E034830A4E9046E2A753CD07 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */ = {isa = PBXBuildFile; fileRef = 2A8349B9DC1748C2A79189E4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */; };
+		E2FA850A97674AB2A30C3F11 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */ = {isa = PBXBuildFile; fileRef = D5179ED7597C4B0580FCB834 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */; };
+		E363064B24C8482183722EBB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderBand.cpp */ = {isa = PBXBuildFile; fileRef = 5931F24EF84C48F9A8C58764 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderBand.cpp */; };
+		E370E1EC5AAC45158441BD71 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */ = {isa = PBXBuildFile; fileRef = 302CA2728B304DDEB17822DF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */; };
+		EAF5FE1754304F92A6E210CF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginProcessor.cpp */ = {isa = PBXBuildFile; fileRef = 225B3A935A20402DAA1B3666 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginProcessor.cpp */; };
+		ED6C04FA8D024FDA9CF14759 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo.rule */ = {isa = PBXBuildFile; fileRef = 0C004A74245F4D2E8CA426B9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo.rule */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXBuildStyle section */
+		AC3A59DF5DCC4B3EAAD43ECF /* RelWithDebInfo */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = RelWithDebInfo;
+		};
+		B237C9D2781A4CBDB504DC20 /* Debug */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Debug;
+		};
+		DE164B5BFDAD45CBBD5E6510 /* Release */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = Release;
+		};
+		E14F8AACAC98439AA53D0D88 /* MinSizeRel */ = {
+			isa = PBXBuildStyle;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+			};
+			name = MinSizeRel;
+		};
+/* End PBXBuildStyle section */
+
+/* Begin PBXContainerItemProxy section */
+		0BB5405504884F088175F0E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		1B1EE0D64DC84CB886A7403B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16565A6819C4C23C0F9A3967;
+			remoteInfo = ProjectPlugIn_AU;
+		};
+		2987E944A70E4893B0BA8B01 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930082056620360E15F16B96;
+			remoteInfo = ProjectPlugIn;
+		};
+		30BB25B6F7E94C5589FC9C84 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		3A4CB953C9564286A78A36DE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DE441E7F3D7AF04C5AC3F04;
+			remoteInfo = ProjectPlugIn_VST3;
+		};
+		5122F97FE7ED4D8EABF24727 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D7DCF0C02D7E74883E348691;
+			remoteInfo = ProjectPlugIn_vst3_helper;
+		};
+		6933E070799948ADB88CBBB2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 16565A6819C4C23C0F9A3967;
+			remoteInfo = ProjectPlugIn_AU;
+		};
+		9DDDB638282E4BB5A925A79D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DE441E7F3D7AF04C5AC3F04;
+			remoteInfo = ProjectPlugIn_VST3;
+		};
+		9E541E4FF8B84343873F28C9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		C81B324102884C338527CF3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		EC1BA06E68A045B48E0F9616 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		F0737A952E8A43648F97CDA0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930082056620360E15F16B96;
+			remoteInfo = ProjectPlugIn;
+		};
+		F68FE2C179764CC3BDFCB39A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8FC80B6FDA6EDF173AFC99CE;
+			remoteInfo = ZERO_CHECK;
+		};
+		F98AE3A8944A426883F6673C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FEED3629555C673188169929;
+			remoteInfo = ALL_BUILD;
+		};
+		FE953393366E44DDBEEB0AA8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0347B5ADB69F4F85BCE15346 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 930082056620360E15F16B96;
+			remoteInfo = ProjectPlugIn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00761EF9CE694665BE38455F /* ProjectPlugIn_AU */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; path = "Project PlugIn.component/Contents/MacOS/Project PlugIn"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0984789420374573969B961B /* ProjectPlugIn_VST3 */ = {isa = PBXFileReference; explicitFileType = "wrapper.plug-in"; path = "Project PlugIn.vst3/Contents/MacOS/Project PlugIn"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0A79AB522A2248E7B14B00C9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AAX.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm; sourceTree = SOURCE_ROOT; };
+		0C004A74245F4D2E8CA426B9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo.rule */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = PkgInfo.rule; path = build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo.rule; sourceTree = SOURCE_ROOT; };
+		0EEFB9B25C0C4C7986436FC6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AU_1.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
+		1402528B4F954A06BAD00073 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = juce_graphics_Sheenbidi.c; path = JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c; sourceTree = SOURCE_ROOT; };
+		14486334C59545C9B1FBC50F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_extra/juce_gui_extra.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_gui_extra.mm; path = JUCE/modules/juce_gui_extra/juce_gui_extra.mm; sourceTree = SOURCE_ROOT; };
+		151E94B949B84E4BB8CE1B04 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		1BD524D940AB494E9E1D2AB4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_ARA.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
+		1EB70890CEC644EBAD20C560 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AU_2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm; sourceTree = SOURCE_ROOT; };
+		218E85E7B17C41ABBE27ECBD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_devices/juce_audio_devices.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_devices.mm; path = JUCE/modules/juce_audio_devices/juce_audio_devices.mm; sourceTree = SOURCE_ROOT; };
+		225B3A935A20402DAA1B3666 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginProcessor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PluginProcessor.cpp; path = Source/PluginProcessor.cpp; sourceTree = SOURCE_ROOT; };
+		2593BEBDFA734C40838EB1AB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_Unity.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp; sourceTree = SOURCE_ROOT; };
+		25CC0432355C45A58DB6DD3F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_gui_basics_3.cpp; path = JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp; sourceTree = SOURCE_ROOT; };
+		27E30B8509FA4C7C9A3F1B45 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_events/juce_events.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_events.mm; path = JUCE/modules/juce_events/juce_events.mm; sourceTree = SOURCE_ROOT; };
+		2A8349B9DC1748C2A79189E4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = PkgInfo; path = build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo; sourceTree = SOURCE_ROOT; };
+		302CA2728B304DDEB17822DF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_VST2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm; sourceTree = SOURCE_ROOT; };
+		371BEE6D76624C67915FCDD9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AU_2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm; sourceTree = SOURCE_ROOT; };
+		3B9D8286CDA34D53B2C93F68 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core_CompilationTime.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_core_CompilationTime.cpp; path = JUCE/modules/juce_core/juce_core_CompilationTime.cpp; sourceTree = SOURCE_ROOT; };
+		4112AFB115CE449A8B4AC8A0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginEditor.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = PluginEditor.cpp; path = Source/PluginEditor.cpp; sourceTree = SOURCE_ROOT; };
+		43C46CA4A2334C86A9E48154 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_VST2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm; sourceTree = SOURCE_ROOT; };
+		48A9545D2BCD4647921629C0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_data_structures/juce_data_structures.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_data_structures.mm; path = JUCE/modules/juce_data_structures/juce_data_structures.mm; sourceTree = SOURCE_ROOT; };
+		4A6FC306C3DE4030B6FADB1A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4FF569C9A60648F5984D3AD1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_core.mm; path = JUCE/modules/juce_core/juce_core.mm; sourceTree = SOURCE_ROOT; };
+		5135F730B230410FBD5699D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/OutputStage.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = OutputStage.cpp; path = Source/OutputStage.cpp; sourceTree = SOURCE_ROOT; };
+		525C3049BBC54774BECC3776 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_AAX_utils.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp; sourceTree = SOURCE_ROOT; };
+		52A92C0745B245788A05A290 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AUv3.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm; sourceTree = SOURCE_ROOT; };
+		5631FC0A93F441D684EB56F6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AU_1.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm; sourceTree = SOURCE_ROOT; };
+		5931F24EF84C48F9A8C58764 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderBand.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = VocoderBand.cpp; path = Source/VocoderBand.cpp; sourceTree = SOURCE_ROOT; };
+		5A431867F2A34F46A7541DC8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_dsp/juce_dsp.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_dsp.mm; path = JUCE/modules/juce_dsp/juce_dsp.mm; sourceTree = SOURCE_ROOT; };
+		5DA842EE9F2B4966B6BD601A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_gui_basics_4.cpp; path = JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp; sourceTree = SOURCE_ROOT; };
+		676C9484A13B49DA81EF6388 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_VST3.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm; sourceTree = SOURCE_ROOT; };
+		67B9F732BEC44C5D8B95FE05 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = PkgInfo; path = build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo; sourceTree = SOURCE_ROOT; };
+		707D6B9536944DCCB0BB8E65 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_graphics.mm; path = JUCE/modules/juce_graphics/juce_graphics.mm; sourceTree = SOURCE_ROOT; };
+		7227AC1077914002A78D6476 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_formats/juce_audio_formats.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_formats.mm; path = JUCE/modules/juce_audio_formats/juce_audio_formats.mm; sourceTree = SOURCE_ROOT; };
+		73918907F0ED4976904E76D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_Unity.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp; sourceTree = SOURCE_ROOT; };
+		78F08310E03D40439F7BF0A8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_processors_headless.mm; path = JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm; sourceTree = SOURCE_ROOT; };
+		7CEF01D4D155412AB0D671D5 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		7EE3762793724F3FA06D533E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AUv3.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm; sourceTree = SOURCE_ROOT; };
+		827614785EF343ECA36FB780 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		881DA4E4318A46759B3AB2D4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_utils/juce_audio_utils.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_utils.mm; path = JUCE/modules/juce_audio_utils/juce_audio_utils.mm; sourceTree = SOURCE_ROOT; };
+		97A93F3E9DA242458F9AF9EC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_graphics_Harfbuzz.cpp; path = JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp; sourceTree = SOURCE_ROOT; };
+		98F4A50D4DA84FECB1B887E1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_ARA.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp; sourceTree = SOURCE_ROOT; };
+		9968F0602FE84E49A74B810A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_Standalone.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
+		A3A7907D36024076B50E57D9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		A7C8458A9D6D4CB690210040 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_LV2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm; sourceTree = SOURCE_ROOT; };
+		B009267D76CB4E4EB2ECC35D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_Standalone.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp; sourceTree = SOURCE_ROOT; };
+		B3B628A56849447E9EDFB74C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_LV2.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm; sourceTree = SOURCE_ROOT; };
+		CA2C3BCD916F42A3814F212A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_basics/juce_audio_basics.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_basics.mm; path = JUCE/modules/juce_audio_basics/juce_audio_basics.mm; sourceTree = SOURCE_ROOT; };
+		CC43D7DFE6044D65AFA98D7E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_processors_headless_ara.cpp; path = JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp; sourceTree = SOURCE_ROOT; };
+		CFA04238A5D0469C886B77DB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_processors_headless_lv2_libs.cpp; path = JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp; sourceTree = SOURCE_ROOT; };
+		D3BDACEF72864BABB2B02408 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo.rule */ = {isa = PBXFileReference; explicitFileType = default; fileEncoding = 4; name = PkgInfo.rule; path = build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo.rule; sourceTree = SOURCE_ROOT; };
+		D5179ED7597C4B0580FCB834 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_VST3.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm; sourceTree = SOURCE_ROOT; };
+		D5340AB567F14AC78DEFC81D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; name = CMakeLists.txt; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		D93C733273064D30AF3643C2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors/juce_audio_processors.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_processors.mm; path = JUCE/modules/juce_audio_processors/juce_audio_processors.mm; sourceTree = SOURCE_ROOT; };
+		DB24D866C4284EC89DFD2D39 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_gui_basics_2.cpp; path = JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp; sourceTree = SOURCE_ROOT; };
+		DF06C75F371C439187DABE43 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_gui_basics_5.cpp; path = JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp; sourceTree = SOURCE_ROOT; };
+		E335AB8591DF45F3860BB9DD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = juce_audio_plugin_client_AAX_utils.cpp; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp; sourceTree = SOURCE_ROOT; };
+		E474B44F191E49D1A501B0D3 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderEngine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = VocoderEngine.cpp; path = Source/VocoderEngine.cpp; sourceTree = SOURCE_ROOT; };
+		E5174284F1FD4AC2821C4A28 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_gui_basics.mm; path = JUCE/modules/juce_gui_basics/juce_gui_basics.mm; sourceTree = SOURCE_ROOT; };
+		E600870B2155468FBE410EE2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.objcpp; fileEncoding = 4; name = juce_audio_plugin_client_AAX.mm; path = JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm; sourceTree = SOURCE_ROOT; };
+		E9DEDE91F5094B14969789F7 /* ProjectPlugIn */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "libProject PlugIn_SharedCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B9D1D0BDFFE4C73B5E8EF10 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9E32C7DA125842F5BE908A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DD9F87C380E94D36A6C277FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0549E90E8E71424F8CEE8BF1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1F480CB8AD4C4308B6878149 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				0C004A74245F4D2E8CA426B9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		24D5C450A57348079D7A6B19 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA2C3BCD916F42A3814F212A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_basics/juce_audio_basics.mm */,
+				218E85E7B17C41ABBE27ECBD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_devices/juce_audio_devices.mm */,
+				7227AC1077914002A78D6476 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_formats/juce_audio_formats.mm */,
+				D93C733273064D30AF3643C2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors/juce_audio_processors.mm */,
+				78F08310E03D40439F7BF0A8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm */,
+				CC43D7DFE6044D65AFA98D7E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp */,
+				CFA04238A5D0469C886B77DB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp */,
+				881DA4E4318A46759B3AB2D4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_utils/juce_audio_utils.mm */,
+				4FF569C9A60648F5984D3AD1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core.mm */,
+				3B9D8286CDA34D53B2C93F68 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core_CompilationTime.cpp */,
+				48A9545D2BCD4647921629C0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_data_structures/juce_data_structures.mm */,
+				5A431867F2A34F46A7541DC8 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_dsp/juce_dsp.mm */,
+				27E30B8509FA4C7C9A3F1B45 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_events/juce_events.mm */,
+				707D6B9536944DCCB0BB8E65 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics.mm */,
+				97A93F3E9DA242458F9AF9EC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp */,
+				1402528B4F954A06BAD00073 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c */,
+				E5174284F1FD4AC2821C4A28 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics.mm */,
+				DB24D866C4284EC89DFD2D39 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp */,
+				25CC0432355C45A58DB6DD3F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp */,
+				5DA842EE9F2B4966B6BD601A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp */,
+				DF06C75F371C439187DABE43 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp */,
+				14486334C59545C9B1FBC50F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_extra/juce_gui_extra.mm */,
+				5135F730B230410FBD5699D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/OutputStage.cpp */,
+				4112AFB115CE449A8B4AC8A0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginEditor.cpp */,
+				225B3A935A20402DAA1B3666 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginProcessor.cpp */,
+				5931F24EF84C48F9A8C58764 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderBand.cpp */,
+				E474B44F191E49D1A501B0D3 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderEngine.cpp */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		41ADBBF7E351465C9199316B /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				D3BDACEF72864BABB2B02408 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		4D801C21165C4E86B500DB6B /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A79AB522A2248E7B14B00C9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */,
+				E335AB8591DF45F3860BB9DD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */,
+				1BD524D940AB494E9E1D2AB4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */,
+				0EEFB9B25C0C4C7986436FC6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */,
+				371BEE6D76624C67915FCDD9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */,
+				7EE3762793724F3FA06D533E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */,
+				B3B628A56849447E9EDFB74C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */,
+				9968F0602FE84E49A74B810A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */,
+				2593BEBDFA734C40838EB1AB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */,
+				43C46CA4A2334C86A9E48154 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */,
+				676C9484A13B49DA81EF6388 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		5E7E8F1054784594AA16F083 /* ProjectPlugIn_AU */ = {
+			isa = PBXGroup;
+			children = (
+				1F480CB8AD4C4308B6878149 /* CMake Rules */,
+				4D801C21165C4E86B500DB6B /* Source Files */,
+				151E94B949B84E4BB8CE1B04 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+				67B9F732BEC44C5D8B95FE05 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */,
+			);
+			name = ProjectPlugIn_AU;
+			sourceTree = "<group>";
+		};
+		651D00017F8E4E15B61AC675 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				D61B395BA89248629334D6F2 /* CMake Rules */,
+				827614785EF343ECA36FB780 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		6DF8C8F1AE74467D9CF8C7DC /* ProjectPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				B44F3BD7104742519A0D32F8 /* ProjectPlugIn */,
+				5E7E8F1054784594AA16F083 /* ProjectPlugIn_AU */,
+				6FEB2E3612D8415A93245DA8 /* ProjectPlugIn_All */,
+				B5CBF0E7D5E94B05B11B6AC5 /* ProjectPlugIn_VST3 */,
+			);
+			name = ProjectPlugIn;
+			sourceTree = "<group>";
+		};
+		6FEB2E3612D8415A93245DA8 /* ProjectPlugIn_All */ = {
+			isa = PBXGroup;
+			children = (
+				4A6FC306C3DE4030B6FADB1A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+			);
+			name = ProjectPlugIn_All;
+			sourceTree = "<group>";
+		};
+		8F3DA8DB10BD4287A00D9088 /* ProjectPlugIn_vst3_helper */ = {
+			isa = PBXGroup;
+			children = (
+				917BE6CB0CBD460C8A1E9ECC /* CMake Rules */,
+				A3A7907D36024076B50E57D9 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+			);
+			name = ProjectPlugIn_vst3_helper;
+			sourceTree = "<group>";
+		};
+		917BE6CB0CBD460C8A1E9ECC /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B44F3BD7104742519A0D32F8 /* ProjectPlugIn */ = {
+			isa = PBXGroup;
+			children = (
+				24D5C450A57348079D7A6B19 /* Source Files */,
+				D5340AB567F14AC78DEFC81D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+			);
+			name = ProjectPlugIn;
+			sourceTree = "<group>";
+		};
+		B5CBF0E7D5E94B05B11B6AC5 /* ProjectPlugIn_VST3 */ = {
+			isa = PBXGroup;
+			children = (
+				41ADBBF7E351465C9199316B /* CMake Rules */,
+				C15B5D312EC14E75B88C211C /* Source Files */,
+				7CEF01D4D155412AB0D671D5 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/CMakeLists.txt */,
+				2A8349B9DC1748C2A79189E4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */,
+			);
+			name = ProjectPlugIn_VST3;
+			sourceTree = "<group>";
+		};
+		C15B5D312EC14E75B88C211C /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				E600870B2155468FBE410EE2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */,
+				525C3049BBC54774BECC3776 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */,
+				98F4A50D4DA84FECB1B887E1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */,
+				5631FC0A93F441D684EB56F6 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */,
+				1EB70890CEC644EBAD20C560 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */,
+				52A92C0745B245788A05A290 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */,
+				A7C8458A9D6D4CB690210040 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */,
+				B009267D76CB4E4EB2ECC35D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */,
+				73918907F0ED4976904E76D2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */,
+				302CA2728B304DDEB17822DF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */,
+				D5179ED7597C4B0580FCB834 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		C4916E5297B640178C76D407 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D61B395BA89248629334D6F2 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		D646526749BA468180528360 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E9DEDE91F5094B14969789F7 /* ProjectPlugIn */,
+				00761EF9CE694665BE38455F /* ProjectPlugIn_AU */,
+				0984789420374573969B961B /* ProjectPlugIn_VST3 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECC629364FB64EEEB807F04B = {
+			isa = PBXGroup;
+			children = (
+				651D00017F8E4E15B61AC675 /* ALL_BUILD */,
+				6DF8C8F1AE74467D9CF8C7DC /* ProjectPlugIn */,
+				8F3DA8DB10BD4287A00D9088 /* ProjectPlugIn_vst3_helper */,
+				D646526749BA468180528360 /* Products */,
+				0549E90E8E71424F8CEE8BF1 /* Frameworks */,
+				C4916E5297B640178C76D407 /* Resources */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		16565A6819C4C23C0F9A3967 /* ProjectPlugIn_AU */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0ECE6672F12240F4BF68721A /* Build configuration list for PBXNativeTarget "ProjectPlugIn_AU" */;
+			buildPhases = (
+				D588B5EC534C60DF04D9F602 /* Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */,
+				7AB596A67CB34CE1B940C245 /* Sources */,
+				9E32C7DA125842F5BE908A17 /* Frameworks */,
+				7948A08043204D44066AE8DD /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4C7359FEFAB94897B7CEB365 /* PBXTargetDependency */,
+				F209343B990D4B32864B8F5F /* PBXTargetDependency */,
+			);
+			name = ProjectPlugIn_AU;
+			productName = ProjectPlugIn_AU;
+			productReference = 00761EF9CE694665BE38455F /* ProjectPlugIn_AU */;
+			productType = "com.apple.product-type.bundle";
+		};
+		4DE441E7F3D7AF04C5AC3F04 /* ProjectPlugIn_VST3 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631F40C8C5A2482A819212C1 /* Build configuration list for PBXNativeTarget "ProjectPlugIn_VST3" */;
+			buildPhases = (
+				D7816DF55973BB00C7F49719 /* Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */,
+				9A5C03EEA7B44F1C8BA189C8 /* Sources */,
+				DD9F87C380E94D36A6C277FC /* Frameworks */,
+				15772E847570746C38E8992F /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7FD3052E667D4018AD3E2776 /* PBXTargetDependency */,
+				0F29FBF66338460A92C588C9 /* PBXTargetDependency */,
+				84C73D03AE5D44FAAA35AB15 /* PBXTargetDependency */,
+			);
+			name = ProjectPlugIn_VST3;
+			productName = ProjectPlugIn_VST3;
+			productReference = 0984789420374573969B961B /* ProjectPlugIn_VST3 */;
+			productType = "com.apple.product-type.bundle";
+		};
+		930082056620360E15F16B96 /* ProjectPlugIn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2D73DCBDDC824230A832ADA3 /* Build configuration list for PBXNativeTarget "ProjectPlugIn" */;
+			buildPhases = (
+				90385B563DF44F1EABAE4646 /* Sources */,
+				3B9D1D0BDFFE4C73B5E8EF10 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1702BA876AC641AA81C4C416 /* PBXTargetDependency */,
+			);
+			name = ProjectPlugIn;
+			productName = ProjectPlugIn;
+			productReference = E9DEDE91F5094B14969789F7 /* ProjectPlugIn */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0347B5ADB69F4F85BCE15346 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2660;
+			};
+			buildConfigurationList = 616E22C21C06459B90BCA466 /* Build configuration list for PBXProject "ProjectPlugIn" */;
+			buildSettings = {
+			};
+			buildStyles = (
+				B237C9D2781A4CBDB504DC20 /* Debug */,
+				DE164B5BFDAD45CBBD5E6510 /* Release */,
+				E14F8AACAC98439AA53D0D88 /* MinSizeRel */,
+				AC3A59DF5DCC4B3EAAD43ECF /* RelWithDebInfo */,
+			);
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			mainGroup = ECC629364FB64EEEB807F04B;
+			projectDirPath = /Users/cameronpye/Downloads/ProjectPlugIn_update2;
+			projectRoot = "";
+			targets = (
+				FEED3629555C673188169929 /* ALL_BUILD */,
+				26005AF08334FDF82CAB62E5 /* install */,
+				930082056620360E15F16B96 /* ProjectPlugIn */,
+				B71E9FF21D4AB5F28C8424FE /* ProjectPlugIn_All */,
+				16565A6819C4C23C0F9A3967 /* ProjectPlugIn_AU */,
+				4DE441E7F3D7AF04C5AC3F04 /* ProjectPlugIn_VST3 */,
+				D7DCF0C02D7E74883E348691 /* ProjectPlugIn_vst3_helper */,
+				8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		15772E847570746C38E8992F /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}","${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist","$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)","$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)"			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project PlugIn.vst3/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo removing\\ moduleinfo.json
+  /opt/homebrew/bin/cmake -E remove -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project\\ PlugIn.vst3/Contents/moduleinfo.json /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo creating\\ /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  /opt/homebrew/bin/cmake -E make_directory /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project\\ PlugIn.vst3/Contents/Resources
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/vst3_helper > /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3/Project PlugIn.vst3\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/VST3 -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project PlugIn.vst3/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo removing\\ moduleinfo.json
+  /opt/homebrew/bin/cmake -E remove -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project\\ PlugIn.vst3/Contents/moduleinfo.json /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo creating\\ /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  /opt/homebrew/bin/cmake -E make_directory /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project\\ PlugIn.vst3/Contents/Resources
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/vst3_helper > /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3/Project PlugIn.vst3\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/VST3 -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project PlugIn.vst3/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo removing\\ moduleinfo.json
+  /opt/homebrew/bin/cmake -E remove -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project\\ PlugIn.vst3/Contents/moduleinfo.json /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo creating\\ /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  /opt/homebrew/bin/cmake -E make_directory /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project\\ PlugIn.vst3/Contents/Resources
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/vst3_helper > /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3/Project PlugIn.vst3\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/VST3 -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project PlugIn.vst3/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo removing\\ moduleinfo.json
+  /opt/homebrew/bin/cmake -E remove -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project\\ PlugIn.vst3/Contents/moduleinfo.json /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E echo creating\\ /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  /opt/homebrew/bin/cmake -E make_directory /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project\\ PlugIn.vst3/Contents/Resources
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/vst3_helper > /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project\\ PlugIn.vst3/Contents/Resources/moduleinfo.json
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project PlugIn.vst3\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3/Project PlugIn.vst3\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/VST3 -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		3C0110FC8322DE7E50886E21 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		46A8F6A5697334B9531FB7A0 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		7948A08043204D44066AE8DD /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${PRODUCT_NAME}","${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Info.plist","$(TARGET_BUILD_DIR)/$(EXECUTABLE_PATH)","$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)"			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/AU/Project PlugIn.component/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/AU/Project PlugIn.component\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/AU/Project PlugIn.component\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/Components -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/AU/Project PlugIn.component/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/AU/Project PlugIn.component\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/AU/Project PlugIn.component\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/Components -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/AU/Project PlugIn.component/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/AU/Project PlugIn.component\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/AU/Project PlugIn.component\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/Components -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -E copy /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo \"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/AU/Project PlugIn.component/Contents\"
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/AU/Project PlugIn.component\" -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/checkBundleSigning.cmake
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake \"-Dsrc=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/AU/Project PlugIn.component\" -Ddest=/Users/cameronpye/Library/Audio/Plug-Ins/Components -P /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/copyDir.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		87AF4882E018677E2624B544 = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		93426DA6A4AC2C2AC9CE883C /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "CMake PostBuild Rules";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -DBUILD_TYPE=$CONFIGURATION$EFFECTIVE_PLATFORM_NAME -P cmake_install.cmake
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		9B50530E35CC49C82C2FACCF = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		9B7F48A4620F2358D043CCA4 /* Generate CMakeFiles/ZERO_CHECK */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ZERO_CHECK";
+			outputPaths = (
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ZERO_CHECK			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  make -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  make -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  make -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeScripts/ReRunCMake.make
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  make -f /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeScripts/ReRunCMake.make
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		B5CBA0672C75F476D7E3937F = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# shell script goes here
+exit 0";
+			showEnvVarsInLog = 0;
+		};
+		B5FA8B1CD671AEE12D5429C1 /* Generate CMakeFiles/ProjectPlugIn_vst3_helper */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ProjectPlugIn_vst3_helper";
+			outputPaths = (
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_vst3_helper			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -GXcode -S/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/juce_vst3_helper -B/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn -Dhelper_name=vst3_helper -Dsource_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp -Dshared_defs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_defs_Debug.txt -Dshared_incs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_incs_Debug.txt -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  /opt/homebrew/bin/cmake --build /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -GXcode -S/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/juce_vst3_helper -B/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn -Dhelper_name=vst3_helper -Dsource_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp -Dshared_defs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_defs_Release.txt -Dshared_incs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_incs_Release.txt -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  /opt/homebrew/bin/cmake --build /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -GXcode -S/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/juce_vst3_helper -B/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn -Dhelper_name=vst3_helper -Dsource_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp -Dshared_defs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_defs_MinSizeRel.txt -Dshared_incs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_incs_MinSizeRel.txt -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  /opt/homebrew/bin/cmake --build /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /opt/homebrew/bin/cmake -GXcode -S/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/extras/Build/CMake/juce_vst3_helper -B/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn -Dhelper_name=vst3_helper -Dsource_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.cpp -Dshared_defs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_defs_RelWithDebInfo.txt -Dshared_incs_file=/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn/shared_incs_RelWithDebInfo.txt -DCMAKE_CXX_COMPILER=/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++
+  /opt/homebrew/bin/cmake --build /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/vst3_helpers/ProjectPlugIn
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D588B5EC534C60DF04D9F602 /* Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo";
+			outputPaths = (
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo AU /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo AU /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo AU /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo AU /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU/PkgInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		D7816DF55973BB00C7F49719 /* Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo";
+			outputPaths = (
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo VST3 /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo VST3 /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo VST3 /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/JUCE/tools/extras/Build/juceaide/juceaide_artefacts/Custom/juceaide pkginfo VST3 /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3/PkgInfo
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+		F8FD25524CCD13BA331FA336 /* Generate CMakeFiles/ALL_BUILD */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Generate CMakeFiles/ALL_BUILD";
+			outputPaths = (
+/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ALL_BUILD			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e
+if test \"$CONFIGURATION\" = \"Debug\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"Release\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"MinSizeRel\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  echo Build\\ all\\ projects
+fi
+if test \"$CONFIGURATION\" = \"RelWithDebInfo\"; then :
+  cd /Users/cameronpye/Downloads/ProjectPlugIn_update2/build
+  echo Build\\ all\\ projects
+fi
+";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7AB596A67CB34CE1B940C245 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86FC028E3995435F908D5BE4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */,
+				30F730BBBDFF49FDB7EFC9EC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */,
+				D0CC9A67EDEA47849CE8D4BD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */,
+				6438A00E18484B8F933481C1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */,
+				AAFC6C82D92B43D1AA46364A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */,
+				CC169A879B934C15A2B366CD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */,
+				AEC5CC8E5783429B9F6CB69F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */,
+				3BA8525FD60649FD80462FC2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */,
+				75398C4FF6A5411CB59EF53A /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */,
+				2CAB7D9B41F445E3973BF423 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */,
+				4B9145526D66425CB07AF8C3 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		90385B563DF44F1EABAE4646 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D26A5272C5D1406297BC3836 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_basics/juce_audio_basics.mm */,
+				D6B82F8D0965496AAD04FC50 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_devices/juce_audio_devices.mm */,
+				D84C2D3EBB2B433F920C7FC0 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_formats/juce_audio_formats.mm */,
+				28B67CAE553541168078799E /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors/juce_audio_processors.mm */,
+				B01501D0886E43B882C4D033 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless.mm */,
+				D90B85E1F75E44FA9FA67422 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_ara.cpp */,
+				72328D3BFC1E4AD08BF188BE /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/juce_audio_processors_headless_lv2_libs.cpp */,
+				7A7531A065124546B38386AB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_utils/juce_audio_utils.mm */,
+				72D1EBEC80A94B46A86C712C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core.mm */,
+				1AB9BA6CB41B4188962B400F /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_core/juce_core_CompilationTime.cpp */,
+				1B2335D6BEDF441FB8E82FFC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_data_structures/juce_data_structures.mm */,
+				8D0DDEE46BE0403AA7A16AF1 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_dsp/juce_dsp.mm */,
+				A58BC25478E34E04B35DEA86 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_events/juce_events.mm */,
+				5B641530BAD049F587DA34DD /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics.mm */,
+				1449AC1F63F04FA58A7DEDB4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Harfbuzz.cpp */,
+				1AA99DCD392E4C6AA9FE33D4 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_graphics/juce_graphics_Sheenbidi.c */,
+				1817F225CC3648AE85418664 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics.mm */,
+				5E0189DD840E480495F6E1AA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_2.cpp */,
+				3B406384BCFA48E9968BABBC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_3.cpp */,
+				68CC1F87484143C69AE3255C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_4.cpp */,
+				0A049D3DC95243BAA44D6EAF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_basics/juce_gui_basics_5.cpp */,
+				6B136C9C613D4373AEB0ED3D /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_gui_extra/juce_gui_extra.mm */,
+				01BF2BF6B1BD4A788F45F8C7 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/OutputStage.cpp */,
+				CF466391DF824EAE96FFDA68 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginEditor.cpp */,
+				EAF5FE1754304F92A6E210CF /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/PluginProcessor.cpp */,
+				E363064B24C8482183722EBB /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderBand.cpp */,
+				72EE279E33324AA5AC699008 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/Source/VocoderEngine.cpp */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A5C03EEA7B44F1C8BA189C8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CAEFBE8EEFCE4FF1850667DA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm */,
+				0F7ED680642642F28CB990EA /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp */,
+				B05D32E8A36E4E4491AF2AC2 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp */,
+				CBB0E4D2905C4872815F1885 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm */,
+				988EE8CF8DE04A8EB1E74457 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm */,
+				6409F22E1C584918A19D264C /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm */,
+				3AA14192223B4C459835BB79 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm */,
+				1B8D099685764EB4B2A60514 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp */,
+				6A507810E3FF4493844628FC /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp */,
+				E370E1EC5AAC45158441BD71 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm */,
+				E2FA850A97674AB2A30C3F11 /* /Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0F29FBF66338460A92C588C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D7DCF0C02D7E74883E348691 /* ProjectPlugIn_vst3_helper */;
+			targetProxy = 5122F97FE7ED4D8EABF24727 /* PBXContainerItemProxy */;
+		};
+		12C54A874BDA416CBBB36E94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16565A6819C4C23C0F9A3967 /* ProjectPlugIn_AU */;
+			targetProxy = 6933E070799948ADB88CBBB2 /* PBXContainerItemProxy */;
+		};
+		1702BA876AC641AA81C4C416 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = 30BB25B6F7E94C5589FC9C84 /* PBXContainerItemProxy */;
+		};
+		22DD339E64B0498BB6BD0460 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930082056620360E15F16B96 /* ProjectPlugIn */;
+			targetProxy = FE953393366E44DDBEEB0AA8 /* PBXContainerItemProxy */;
+		};
+		48F6B82222B34703938CE167 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = EC1BA06E68A045B48E0F9616 /* PBXContainerItemProxy */;
+		};
+		4C7359FEFAB94897B7CEB365 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930082056620360E15F16B96 /* ProjectPlugIn */;
+			targetProxy = 2987E944A70E4893B0BA8B01 /* PBXContainerItemProxy */;
+		};
+		7C472EFA253E4456A77A1DD1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 16565A6819C4C23C0F9A3967 /* ProjectPlugIn_AU */;
+			targetProxy = 1B1EE0D64DC84CB886A7403B /* PBXContainerItemProxy */;
+		};
+		7FD3052E667D4018AD3E2776 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 930082056620360E15F16B96 /* ProjectPlugIn */;
+			targetProxy = F0737A952E8A43648F97CDA0 /* PBXContainerItemProxy */;
+		};
+		84C73D03AE5D44FAAA35AB15 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = C81B324102884C338527CF3C /* PBXContainerItemProxy */;
+		};
+		B9508F34F91D4C578749971E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FEED3629555C673188169929 /* ALL_BUILD */;
+			targetProxy = F98AE3A8944A426883F6673C /* PBXContainerItemProxy */;
+		};
+		BC218B899F1145F2BFB6BCE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DE441E7F3D7AF04C5AC3F04 /* ProjectPlugIn_VST3 */;
+			targetProxy = 3A4CB953C9564286A78A36DE /* PBXContainerItemProxy */;
+		};
+		C2A51C8F72004A649B3F642A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = 9E541E4FF8B84343873F28C9 /* PBXContainerItemProxy */;
+		};
+		E87A53882CB94F53939BA6FD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = 0BB5405504884F088175F0E2 /* PBXContainerItemProxy */;
+		};
+		F209343B990D4B32864B8F5F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8FC80B6FDA6EDF173AFC99CE /* ZERO_CHECK */;
+			targetProxy = F68FE2C179764CC3BDFCB39A /* PBXContainerItemProxy */;
+		};
+		F44715147CE043629BE72DBD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DE441E7F3D7AF04C5AC3F04 /* ProjectPlugIn_VST3 */;
+			targetProxy = 9DDDB638282E4BB5A925A79D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		085A4ADD179C4D7AB1F600FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		0B280632E74B49109B9ABF53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","'JUCE_SHARED_CODE=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("-fPIC -fvisibility=hidden ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++20' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Project PlugIn_SharedCode";
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		0BE600CB9537445BA323D0D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_All;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		19AFC0BCA43B4EA18CDC32A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		201020E75606433BB8C28897 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_vst3_helper;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		327BD7B53F64495AB3C350D4 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_All;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		35EBA6738C5C44E1A714AA62 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/AU;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_AU_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=0'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_AU.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","-framework AudioUnit","-framework CoreAudioKit","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_AU.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = component;
+			};
+			name = MinSizeRel;
+		};
+		373F729F1FAC4F18B31DE345 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/VST3;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_VST3_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=0'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_VST3.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework CoreAudioKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_VST3.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = RelWithDebInfo;
+		};
+		46D17C36CCE2465CA7221A13 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		46DC4F17D9F54D35BEDFA348 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		573BFAED860E4843B5C1B11A /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build;
+			};
+			name = MinSizeRel;
+		};
+		5AC993F9D78D4DF28D943EFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/VST3;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_VST3_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=0'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_VST3.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework CoreAudioKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_VST3.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Release;
+		};
+		65A72E4922594C51897F1005 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/VST3;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_VST3_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=0'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_VST3.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework CoreAudioKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_VST3.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = MinSizeRel;
+		};
+		67CBE3F04CA5483497FD8219 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		705B7CC294244FD8A902DACF /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		73036E1AF661456091899086 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/MinSizeRel;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","'JUCE_SHARED_CODE=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("-fPIC -fvisibility=hidden ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++20' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Project PlugIn_SharedCode";
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		83D7A21B1AAC4B9BB2340E9F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		85128A8811D7467481D82516 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/AU;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_AU_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=0'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_AU.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Release/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","-framework AudioUnit","-framework CoreAudioKit","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_AU.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = component;
+			};
+			name = Release;
+		};
+		8BF45AEF9D074812AAF3E641 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_VST3.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/VST3;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_VST3_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'DEBUG=1'","'_DEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=0'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_VST3.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework CoreAudioKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_VST3.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = vst3;
+			};
+			name = Debug;
+		};
+		94C41C97145D43788E0632DE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_All;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		967BA59906404A779176DEB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		9BE5FE55DE8E4895A8CFED5F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build;
+			};
+			name = Release;
+		};
+		9EAA5D9592C146E6B0087097 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_vst3_helper;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		AAFCD850FB724727B8A76194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_vst3_helper;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		AC726E4D9C9A4093882BCCE0 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","'JUCE_SHARED_CODE=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("-fPIC -fvisibility=hidden ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++20' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Project PlugIn_SharedCode";
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		AD7C06D9B0A749028502699D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=1'","'JUCE_SHARED_CODE=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'DEBUG=1'","'_DEBUG=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,"$(inherited)");
+				INSTALL_PATH = "";
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = ("-fPIC -fvisibility=hidden ","$(inherited)");
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++20' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LIBTOOLFLAGS = ("");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = "Project PlugIn_SharedCode";
+				SECTORDER_FLAGS = "";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Debug;
+		};
+		B1A9A724E3BD465693AD9B20 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_All;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		B4BD91F27B3743EBA6CEAD04 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		B5BA952297444E8F9C2820AA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = RelWithDebInfo;
+		};
+		B5E859D2DE5349D49A11F0EA /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SYMROOT = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build;
+			};
+			name = RelWithDebInfo;
+		};
+		BECFBC5648974747892612C0 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = MinSizeRel;
+		};
+		C1967EC564624778B6AEF966 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		C33A122D03804D3998D4EACC /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/AU;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_AU_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'NDEBUG=1'","'_NDEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=0'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_AU.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/RelWithDebInfo/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","-framework AudioUnit","-framework CoreAudioKit","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_AU.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = component;
+			};
+			name = RelWithDebInfo;
+		};
+		D504AAC38B994218A406EBB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				CLANG_LINK_OBJC_RUNTIME = NO;
+				CODE_SIGN_ENTITLEMENTS = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode/ProjectPlugIn_AU.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CONFIGURATION_BUILD_DIR = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/AU;
+				ENABLE_HARDENED_RUNTIME = FALSE;
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",ProjectPlugIn_AU_EXPORTS,"'JUCE_GLOBAL_MODULE_SETTINGS_INCLUDED=1'","'DEBUG=1'","'_DEBUG=1'","'JUCE_IN_APP_PURCHASES=0'","'JucePlugin_IsSynth=0'","'JucePlugin_ManufacturerCode=0x59636d70'","'JucePlugin_Manufacturer=\"YourCompanyName\"'","'JucePlugin_ManufacturerWebsite=\"\"'","'JucePlugin_ManufacturerEmail=\"\"'","'JucePlugin_PluginCode=0x506c6731'","'JucePlugin_ProducesMidiOutput=0'","'JucePlugin_IsMidiEffect=0'","'JucePlugin_WantsMidiInput=0'","'JucePlugin_EditorRequiresKeyboardFocus=0'","'JucePlugin_Name=\"Project PlugIn\"'","'JucePlugin_Desc=\"Project PlugIn\"'","'JucePlugin_Version=0.1.0'","'JucePlugin_VersionString=\"0.1.0\"'","'JucePlugin_VersionCode=0x100'","'JucePlugin_VSTUniqueID=JucePlugin_PluginCode'","'JucePlugin_VSTCategory=kPlugCategEffect'","'JucePlugin_Vst3Category=\"Fx\"'","'JucePlugin_AUMainType='\\''aufx'\\'''","'JucePlugin_AUSubType=JucePlugin_PluginCode'","'JucePlugin_AUExportPrefix=Project_PlugInAU'","'JucePlugin_AUExportPrefixQuoted=\"Project_PlugInAU\"'","'JucePlugin_AUManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_CFBundleIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXIdentifier=com.yourcompany.projectplugin'","'JucePlugin_AAXManufacturerCode=JucePlugin_ManufacturerCode'","'JucePlugin_AAXProductId=JucePlugin_PluginCode'","'JucePlugin_AAXCategory=0'","'JucePlugin_AAXDisableBypass=0'","'JucePlugin_AAXDisableMultiMono=0'","'JucePlugin_VSTNumMidiInputs=16'","'JucePlugin_VSTNumMidiOutputs=16'","'JucePlugin_Enable_ARA=0'","'JucePlugin_ARAFactoryID=\"com.yourcompany.projectplugin.arafactory.0.1.0\"'","'JucePlugin_ARADocumentArchiveID=\"com.yourcompany.projectplugin.aradocumentarchive.1\"'","'JucePlugin_ARACompatibleArchiveIDs=\"\"'","'JucePlugin_ARAContentTypes=0'","'JucePlugin_ARATransformationFlags=0'","'JUCE_WEB_BROWSER=0'","'JUCE_USE_CURL=0'","'JUCE_VST3_CAN_REPLACE_VST2=0'","'JUCE_MODULE_AVAILABLE_juce_audio_plugin_client=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors=1'","'JUCE_MODULE_AVAILABLE_juce_gui_extra=1'","'JUCE_MODULE_AVAILABLE_juce_gui_basics=1'","'JUCE_MODULE_AVAILABLE_juce_graphics=1'","'JUCE_MODULE_AVAILABLE_juce_events=1'","'JUCE_MODULE_AVAILABLE_juce_core=1'","'JUCE_MODULE_AVAILABLE_juce_data_structures=1'","'JUCE_MODULE_AVAILABLE_juce_audio_processors_headless=1'","'JUCE_MODULE_AVAILABLE_juce_audio_basics=1'","'JUCE_MODULE_AVAILABLE_juce_audio_utils=1'","'JUCE_MODULE_AVAILABLE_juce_audio_formats=1'","'JUCE_MODULE_AVAILABLE_juce_audio_devices=1'","'JUCE_MODULE_AVAILABLE_juce_dsp=1'","'JUCE_STANDALONE_APPLICATION=JucePlugin_Build_Standalone'","'JucePlugin_Build_AU=1'","'JucePlugin_Build_AUv3=0'","'JucePlugin_Build_AAX=0'","'JucePlugin_Build_LV2=0'","'JucePlugin_Build_Standalone=0'","'JucePlugin_Build_Unity=0'","'JucePlugin_Build_VST=0'","'JucePlugin_Build_VST3=0'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_PKGINFO_FILE = YES;
+				HEADER_SEARCH_PATHS = (/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/JuceLibraryCode,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/VST3_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lv2,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/serd,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sord/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/sratom,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_processors_headless/format_types/LV2_SDK/lilv/src,/Users/cameronpye/Downloads/ProjectPlugIn_update2/JUCE/modules/juce_audio_plugin_client/AU,"$(inherited)");
+				INFOPLIST_FILE = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/CMakeFiles/ProjectPlugIn_AU.dir/Info.plist;
+				INSTALL_PATH = "$(LOCAL_APPS_DIR)";
+				LIBRARY_STYLE = Bundle;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CODE_SIGN_FLAGS = "--timestamp";
+				OTHER_CPLUSPLUSFLAGS = "'-std=gnu++17' -fPIC -fvisibility=hidden -fvisibility-inlines-hidden ";
+				OTHER_LDFLAGS = ("-Xlinker -adhoc_codesign -Wl,-headerpad_max_install_names","\"/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/ProjectPlugIn_artefacts/Debug/libProject PlugIn_SharedCode.a\"","-framework WebKit","-weak_framework Metal","-weak_framework MetalKit","-framework DiscRecording","-framework CoreAudio","-framework CoreMIDI","-framework QuartzCore","-framework AudioToolbox","-framework Cocoa","-framework Foundation","-framework IOKit","-framework Security","-framework Accelerate","-framework AudioUnit","-framework CoreAudioKit","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yourcompany.projectplugin;
+				PRODUCT_NAME = "Project PlugIn";
+				SECTORDER_FLAGS = "";
+				SKIP_INSTALL = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGET_TEMP_DIR = "/Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build/ProjectPlugIn_AU.build/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+				WRAPPER_EXTENSION = component;
+			};
+			name = Debug;
+		};
+		EC1B2879A82D41ADAE242361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = arm64;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'","$(inherited)");
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				INSTALL_PATH = "";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = ("","$(inherited)");
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ProjectPlugIn_vst3_helper;
+				SECTORDER_FLAGS = "";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = ("$(inherited)");
+			};
+			name = Release;
+		};
+		EFF2EC92C3314AEF93361313 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = arm64;
+				SDKROOT = "";
+				SYMROOT = /Users/cameronpye/Downloads/ProjectPlugIn_update2/build/build;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0ECE6672F12240F4BF68721A /* Build configuration list for PBXNativeTarget "ProjectPlugIn_AU" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D504AAC38B994218A406EBB6 /* Debug */,
+				85128A8811D7467481D82516 /* Release */,
+				35EBA6738C5C44E1A714AA62 /* MinSizeRel */,
+				C33A122D03804D3998D4EACC /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		0FC785C51E034DC8983385C0 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				085A4ADD179C4D7AB1F600FA /* Debug */,
+				C1967EC564624778B6AEF966 /* Release */,
+				67CBE3F04CA5483497FD8219 /* MinSizeRel */,
+				46D17C36CCE2465CA7221A13 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2D73DCBDDC824230A832ADA3 /* Build configuration list for PBXNativeTarget "ProjectPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AD7C06D9B0A749028502699D /* Debug */,
+				0B280632E74B49109B9ABF53 /* Release */,
+				73036E1AF661456091899086 /* MinSizeRel */,
+				AC726E4D9C9A4093882BCCE0 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		616E22C21C06459B90BCA466 /* Build configuration list for PBXProject "ProjectPlugIn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFF2EC92C3314AEF93361313 /* Debug */,
+				9BE5FE55DE8E4895A8CFED5F /* Release */,
+				573BFAED860E4843B5C1B11A /* MinSizeRel */,
+				B5E859D2DE5349D49A11F0EA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		631F40C8C5A2482A819212C1 /* Build configuration list for PBXNativeTarget "ProjectPlugIn_VST3" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8BF45AEF9D074812AAF3E641 /* Debug */,
+				5AC993F9D78D4DF28D943EFE /* Release */,
+				65A72E4922594C51897F1005 /* MinSizeRel */,
+				373F729F1FAC4F18B31DE345 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		672A00C7D6D84114B5C9A845 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83D7A21B1AAC4B9BB2340E9F /* Debug */,
+				967BA59906404A779176DEB1 /* Release */,
+				BECFBC5648974747892612C0 /* MinSizeRel */,
+				705B7CC294244FD8A902DACF /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A9D820AD4CF84F93806567AF /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19AFC0BCA43B4EA18CDC32A5 /* Debug */,
+				46DC4F17D9F54D35BEDFA348 /* Release */,
+				B4BD91F27B3743EBA6CEAD04 /* MinSizeRel */,
+				B5BA952297444E8F9C2820AA /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AEC2BF030FCA4C94BBA37A51 /* Build configuration list for PBXAggregateTarget "ProjectPlugIn_vst3_helper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AAFCD850FB724727B8A76194 /* Debug */,
+				EC1B2879A82D41ADAE242361 /* Release */,
+				9EAA5D9592C146E6B0087097 /* MinSizeRel */,
+				201020E75606433BB8C28897 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FAD7A41480DC4A7B907CF97A /* Build configuration list for PBXAggregateTarget "ProjectPlugIn_All" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BE600CB9537445BA323D0D0 /* Debug */,
+				B1A9A724E3BD465693AD9B20 /* Release */,
+				94C41C97145D43788E0632DE /* MinSizeRel */,
+				327BD7B53F64495AB3C350D4 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0347B5ADB69F4F85BCE15346 /* Project object */;
+}
