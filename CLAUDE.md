@@ -53,20 +53,70 @@ branding element.
   — this is the visual source of truth for what the real JUCE GUI should look
   like (wood/grille Classic, glassy pastel Modern, VU meter, rotary knobs,
   toggle switch, status sticker, signature).
-- "Layer 1" of translating that mockup into real JUCE C++ is done:
-  `PluginEditor.cpp` draws the wood border / perforated grille (Classic) and
-  glassy light panel (Modern) backgrounds, with a timer that repaints when
-  Character changes. The actual controls (dropdown, sliders) are still
-  JUCE's plain default widgets — NOT yet styled to match the mockup (no
-  rotary knobs, no toggle switch, no VU meter yet). That's the next layer
-  of work.
-- Known currently-unresolved issue: Logic Pro / macOS keeps showing the
-  plugin's manufacturer as the old placeholder "YourCompanyName" instead of
-  "Smith-Pye Audio", even though the actual installed binary and Info.plist
-  on disk are confirmed correct. We were mid-troubleshooting this (tried
-  Reset & Rescan, Full Audio Unit Reset, neither worked yet; suspect Loopcloud
-  may be interfering, was about to search the whole disk for stray copies of
-  the .component file). Pick this up before doing anything else GUI-related.
+- "Layer 1" of translating that mockup into real JUCE C++ is done and
+  CONFIRMED WORKING in Logic Pro: `PluginEditor.cpp` draws the wood border /
+  perforated grille (Classic) and glassy light panel (Modern) backgrounds,
+  with a timer that repaints when Character changes. Confirmed visually
+  correct in Logic Pro as of this session.
+- The actual controls (Character dropdown, Strength/Dry-Wet/Output sliders)
+  are STILL JUCE's plain default widgets — NOT yet styled to match the
+  mockup. No rotary knobs, no custom toggle switch, no VU meter yet. This is
+  "Layer 2" and is the next real piece of GUI work. Note: when Modern's light
+  background is active, the plain widgets currently have poor contrast
+  (grey-on-light labels, dark widget chrome that clashes) — Layer 2 should
+  fix this naturally by replacing them with custom-drawn, mode-aware controls.
+- RESOLVED: Logic Pro was persistently showing the plugin's manufacturer as
+  the old placeholder "YourCompanyName" instead of "Smith-Pye Audio", even
+  though the installed binary/Info.plist on disk were confirmed correct, and
+  even after Reset & Rescan Selection and Full Audio Unit Reset in Logic's
+  Plug-in Manager. Root cause was never fully confirmed, but the fix that
+  worked: changed PLUGIN_MANUFACTURER_CODE (was "Ycmp") and PLUGIN_CODE (was
+  "Plg1") in CMakeLists.txt to new values ("SmPy" / "Plg2"), forcing Logic to
+  treat it as a genuinely new, never-seen plugin identity rather than trying
+  to update/rescan its old cached record of the previous identity. This
+  worked immediately after a clean rebuild. LESSON: if Logic/macOS ever shows
+  stale plugin metadata again after a legitimate source change, changing the
+  manufacturer/plugin codes is a faster, more reliable fix than fighting the
+  cache via Reset & Rescan or Full Audio Unit Reset.
+- Current PLUGIN_MANUFACTURER_CODE / PLUGIN_CODE: "SmPy" / "Plg2". DO NOT
+  change these again now that real testing has started, except deliberately
+  and with the same understanding as above — every change forces Logic to
+  treat it as a new plugin (losing any saved automation/state tied to the
+  old identity in any test projects).
+- A ruled-out theory, for the record: suspected Loopcloud (an old,
+  no-longer-used app) might have installed a stray duplicate .component
+  file somewhere. Did a full disk search (`sudo find / -iname "Project
+  PlugIn.component"`) and confirmed only one real installed copy exists, at
+  the standard `~/Library/Audio/Plug-Ins/Components/` location (plus the
+  expected build-output copy inside the project's own build folder). Not the
+  cause of anything — don't re-investigate this.
+
+## Build/test loop reminders specific to this project
+
+- Xcode, CMake, and JUCE 8.0.14 (as a git submodule) are all installed and
+  working on this Mac. The standard rebuild-and-test loop is:
+  ```
+  cd ~/Downloads/ProjectPlugIn
+  cmake --build build
+  ```
+  (only `rm -rf build && cmake -B build -G Xcode` again if something
+  structural changed, e.g. CMakeLists.txt edits, new source files added,
+  or plugin codes changed — a plain `cmake --build build` is enough for
+  most source file edits)
+- ALWAYS fully quit Logic Pro (Cmd+Q) before testing a rebuilt plugin, then
+  reopen it and start a NEW empty project rather than reusing an old one,
+  to avoid any risk of Logic showing stale cached state.
+- To verify a code change actually reached the compiled plugin (don't just
+  trust the build succeeded): search the real installed binary for a known
+  string from the new code, e.g.
+  ```
+  strings "/Users/cameronpye/Library/Audio/Plug-Ins/Components/Project PlugIn.component/Contents/MacOS/Project PlugIn" | grep -i "SOME_KNOWN_STRING"
+  ```
+- To check the plugin's actual installed metadata directly (bypassing any
+  Logic Pro UI caching question entirely):
+  ```
+  plutil -p "/Users/cameronpye/Library/Audio/Plug-Ins/Components/Project PlugIn.component/Contents/Info.plist"
+  ```
 
 ## House rules for how we build
 
@@ -79,5 +129,61 @@ branding element.
   just trust that an edit landed) before rebuilding, and verify the actual
   build artifact contains the change (e.g. `strings` search) before testing
   in Logic Pro, especially if something seems not to have taken effect.
-- The GitHub repo (jackosmith1297-design/ProjectPlugIn) is the safe backup —
-  commit and push at the end of any real chunk of work.
+
+
+## Future goal: selling this plugin online
+
+This plugin is being built with eventual commercial sale in mind — not just
+personal use. This doesn't change how we build day-to-day, but it means
+certain decisions should be made correctly from the start rather than
+retrofitted later. Keep this context in mind when making architectural or
+design decisions.
+
+**What this means practically while building:**
+- Design any new features (presets, settings, installer) as if a stranger
+  with no context will use them, not just Cameron's husband who knows the
+  project well
+- Keep the codebase clean and documented enough that future maintenance
+  (bug fixes after release, future updates) is manageable
+- Don't hardcode anything that would need changing per-user or per-machine
+- The GUI, branding (Smith-Pye Audio, Project PlugIn), and dual-character
+  concept are all intentional commercial decisions — treat them as such
+
+**Things to build now because they're harder to add later:**
+- **Preset system** — factory presets are essential for commercial plugins;
+  strangers need to get results immediately without knowing the plugin.
+  Build a basic preset save/load system as part of the plugin proper, not
+  as an afterthought. Include at least a handful of named factory presets
+  covering both Classic and Modern characters at different Strength settings.
+- **Installer** — the current build auto-copies to the right folder on
+  Cameron's Mac (COPY_PLUGIN_AFTER_BUILD TRUE in CMakeLists). For end users,
+  a proper double-clickable .pkg installer is needed. Use the free Mac app
+  "Packages" to build this. Design for it from the start.
+
+**Things that need money — NOT blocking current development:**
+- **Apple Developer Account (£79/year)** — required for proper code signing
+  and notarisation so the plugin isn't blocked by Gatekeeper on other Macs.
+  Cameron cannot afford this right now and will purchase it when ready.
+  Until then, continue building and testing on Cameron's own Mac using the
+  current ad-hoc signing (which works fine locally). Do NOT block any
+  feature work waiting for this — just flag clearly in any installer/
+  distribution work that "this step requires Apple Developer signing which
+  will be added when the account is purchased." Build everything else
+  distribution-ready so signing can be dropped in as one final step later.
+- **JUCE commercial licence** — only required once revenue exceeds JUCE's
+  free tier threshold. Not a concern yet, handle when relevant.
+
+**Distribution plan (for reference, not immediate action):**
+- Primary: own website or Gumroad (simple, low fees, full control)
+- Secondary: consider Plugin Boutique / Splice for reach once established
+- Realistic pricing range for this type of plugin: £15–£49
+- This is a side income / passion project, not a business replacement
+
+
+- Repo: https://github.com/jackosmith1297-design/ProjectPlugIn
+- `git` is already set up and authenticated on this Mac — you can run
+  `git add`, `git commit`, and `git push` directly yourself when a real chunk
+  of work is finished, rather than just telling me to do it. Use clear commit
+  messages describing what changed.
+- The repo is the safe backup of this project — commit and push at the end of
+  any real chunk of work so nothing is ever only sitting locally unsaved.
