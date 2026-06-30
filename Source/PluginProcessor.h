@@ -62,11 +62,16 @@ public:
     // saving/loading, and connecting to on-screen knobs/switches for us.
     juce::AudioProcessorValueTreeState parameters;
 
+    // Peak output level in dB, updated each processBlock call.
+    // Read by the editor on a timer to drive the VU meter.
+    std::atomic<float> outputLevelDb { -60.0f };
+
     // Parameter ID constants - used both here and later in the editor,
     // so we always refer to the same parameter by the same name.
-    static constexpr const char* characterParamID = "character";
-    static constexpr const char* strengthParamID = "strength";
-    static constexpr const char* dryWetParamID = "dryWet";
+    static constexpr const char* characterParamID  = "character";
+    static constexpr const char* strengthParamID   = "strength";
+    static constexpr const char* pitchParamID      = "carrierPitch";
+    static constexpr const char* dryWetParamID     = "dryWet";
     static constexpr const char* outputGainParamID = "outputGain";
 
 private:
@@ -85,6 +90,17 @@ private:
     // Dry/Wet control later needs to compare against the ORIGINAL
     // dry voice, so we keep a copy of it before vocoding happens.
     juce::AudioBuffer<float> dryVoiceCopy;
+    juce::AudioBuffer<float> internalCarrier; // pre-allocated, filled each block
+
+    // Sawtooth oscillator state — two phases for Modern's detuned double-osc
+    float carrierPhase  { 0.0f };
+    float carrierPhase2 { 0.0f };
+
+    // Noise HPF for Modern carrier "air" layer
+    float noiseHPFIn    { 0.0f };
+    float noiseHPFOut   { 0.0f };
+    float noiseHPFAlpha { 0.0f }; // computed in prepareToPlay from sample rate
+    uint32_t noiseRng   { 3141592653u };
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (ProjectPlugInAudioProcessor)
 };

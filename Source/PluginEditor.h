@@ -3,44 +3,67 @@
 #include <juce_audio_processors/juce_audio_processors.h>
 #include "PluginProcessor.h"
 
-// This class is the "dashboard" - the window you actually see and click
-// on inside Logic Pro. This is a deliberately plain/functional first
-// version: a switch for Character, a slider for Strength. No visual
-// design has been applied yet - that comes later, once we know the
-// controls actually work correctly.
-class ProjectPlugInAudioProcessorEditor : public juce::AudioProcessorEditor
+// Forward-declared here; full definitions live at the top of PluginEditor.cpp.
+class PluginLookAndFeel;
+class CharacterToggle;
+class VuMeter;
+
+class ProjectPlugInAudioProcessorEditor : public juce::AudioProcessorEditor,
+                                           private juce::Timer
 {
 public:
     explicit ProjectPlugInAudioProcessorEditor (ProjectPlugInAudioProcessor&);
     ~ProjectPlugInAudioProcessorEditor() override;
 
-    // Draws the window's contents.
     void paint (juce::Graphics&) override;
-
-    // Called whenever the window is resized, to reposition controls.
     void resized() override;
 
 private:
-    // A reference back to the engine, so the dashboard can read/control it.
+    void timerCallback() override;
+
+    void paintClassicBackground (juce::Graphics&);
+    void paintModernBackground  (juce::Graphics&);
+    void paintSections          (juce::Graphics&);
+    void paintHeader            (juce::Graphics&);
+    void paintFooter            (juce::Graphics&);
+    void paintKnobLabels        (juce::Graphics&);
+    void paintIoRow             (juce::Graphics&);
+    void paintStatusSticker     (juce::Graphics&);
+    void paintHoloStickers      (juce::Graphics&);
+
+    bool isClassicMode() const;
+
     ProjectPlugInAudioProcessor& audioProcessor;
+    bool wasClassicOnLastPaint { true };
 
-    // The actual on-screen controls.
-    juce::ComboBox characterSelector;
-    juce::Slider strengthSlider;
-    juce::Slider dryWetSlider;
-    juce::Slider outputGainSlider;
+    std::unique_ptr<PluginLookAndFeel> laf;
 
-    juce::Label characterLabel;
-    juce::Label strengthLabel;
-    juce::Label dryWetLabel;
-    juce::Label outputGainLabel;
+    // Character toggle switch (replaces old ComboBox)
+    std::unique_ptr<CharacterToggle> characterToggle;
 
-    // These "attachments" are what link an on-screen control directly
-    // to a plugin parameter - JUCE handles keeping them in sync in both
-    // directions (turning the knob updates the parameter, and the
-    // parameter changing - e.g. via host automation - updates the knob).
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> characterAttachment;
+    // VU meter
+    std::unique_ptr<VuMeter> vuMeter;
+
+    // Rotary knobs (no text boxes — labels drawn in paint())
+    juce::Slider strengthKnob  { juce::Slider::RotaryVerticalDrag, juce::Slider::NoTextBox };
+    juce::Slider pitchKnob     { juce::Slider::RotaryVerticalDrag, juce::Slider::NoTextBox };
+    juce::Slider dryWetKnob    { juce::Slider::RotaryVerticalDrag, juce::Slider::NoTextBox };
+    juce::Slider outputGainKnob{ juce::Slider::RotaryVerticalDrag, juce::Slider::NoTextBox };
+
+    // Stored section bounds — computed in resized(), used in paint()
+    juce::Rectangle<int> signalSectionBounds;
+    juce::Rectangle<int> characterSectionBounds;
+    juce::Rectangle<int> controlsSectionBounds;
+    juce::Rectangle<int> ioRowBounds;
+
+    // Knob centre positions for label painting
+    juce::Point<int> strengthKnobCentre;
+    juce::Point<int> pitchKnobCentre;
+    juce::Point<int> dryWetKnobCentre;
+    juce::Point<int> outputGainKnobCentre;
+
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> strengthAttachment;
+    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> pitchAttachment;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> dryWetAttachment;
     std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> outputGainAttachment;
 

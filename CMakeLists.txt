@@ -10,16 +10,16 @@ add_subdirectory(JUCE)
 # This declares the actual plugin: its name, what formats it builds as,
 # and basic identifying info that Logic Pro / macOS use to recognise it.
 juce_add_plugin(ProjectPlugIn
-    COMPANY_NAME "YourCompanyName"
-    BUNDLE_ID "com.yourcompany.projectplugin"
+    COMPANY_NAME "Smith-Pye Audio"
+    BUNDLE_ID "com.smithpyeaudio.projectplugin"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS FALSE
     COPY_PLUGIN_AFTER_BUILD TRUE
-    PLUGIN_MANUFACTURER_CODE Ycmp
-    PLUGIN_CODE Plg1
+    PLUGIN_MANUFACTURER_CODE SmPy
+    PLUGIN_CODE Plg2
     FORMATS AU VST3
     PRODUCT_NAME "Project PlugIn"
 )

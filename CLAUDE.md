@@ -36,35 +36,63 @@ Two "characters":
   light, glassy, brushed-aluminium panel, luminous pastel accents
   (lavender/mint/sky/peach/pink/lilac).
 
-Both share Strength, Dry/Wet, and Output controls.
+Both share Strength, Pitch, Dry/Wet, and Output controls.
 
 Company/brand name shown in the plugin: **Smith-Pye Audio**. Plugin display
 name: **Project PlugIn**. There's a subtle handwritten-script signature
 ("Smith–Pye") in the corner of the GUI — keep it small and tasteful, not a
 branding element.
 
-## Current state (update this section as things progress)
+## Current state (updated 2026-06-30)
 
-- Full DSP signal chain is written and has compiled successfully:
-  `VocoderBand`, `VocoderEngine` (Classic/Modern), `OutputStage` (Dry/Wet +
-  Output gain), wired into `PluginProcessor` with real automatable parameters
-  (Character, Strength, Dry/Wet, Output) and two input buses (Voice, Carrier).
-- A full HTML/CSS mockup of the intended GUI exists at `mockup/gui_mockup.html`
-  — this is the visual source of truth for what the real JUCE GUI should look
-  like (wood/grille Classic, glassy pastel Modern, VU meter, rotary knobs,
-  toggle switch, status sticker, signature).
-- "Layer 1" of translating that mockup into real JUCE C++ is done and
-  CONFIRMED WORKING in Logic Pro: `PluginEditor.cpp` draws the wood border /
-  perforated grille (Classic) and glassy light panel (Modern) backgrounds,
-  with a timer that repaints when Character changes. Confirmed visually
-  correct in Logic Pro as of this session.
-- The actual controls (Character dropdown, Strength/Dry-Wet/Output sliders)
-  are STILL JUCE's plain default widgets — NOT yet styled to match the
-  mockup. No rotary knobs, no custom toggle switch, no VU meter yet. This is
-  "Layer 2" and is the next real piece of GUI work. Note: when Modern's light
-  background is active, the plain widgets currently have poor contrast
-  (grey-on-light labels, dark widget chrome that clashes) — Layer 2 should
-  fix this naturally by replacing them with custom-drawn, mode-aware controls.
+### DSP / Processor — CONFIRMED WORKING IN LOGIC PRO
+- Single Voice input bus. A Carrier bus exists but is marked optional and
+  ignored — the plugin generates its own internal carrier oscillator, so no
+  sidechain or MIDI is needed. Just drop it on a vocal track.
+- **Internal carrier:** Classic = single PolyBLEP band-limited sawtooth.
+  Modern = two slightly-detuned PolyBLEP saws + 8% high-passed noise layer
+  for added presence/air. PolyBLEP removes the harshest aliasing artefacts
+  from the naive sawtooth.
+- **Parameters (all automatable):** Character, Strength, Pitch (50–400 Hz,
+  skewed so 130 Hz is mid-knob), Dry/Wet, Output gain.
+- **VocoderEngine — DSP improvements as of 2026-06-30:**
+  - Classic: 16 bands, 80 Hz–8 kHz, Q=2.5, attack=2 ms, release=60 ms
+  - Modern:  24 bands, 60 Hz–12 kHz, Q=5.0, attack=3 ms, release=80 ms
+  - Asymmetric envelope follower (separate attack/release) in every band —
+    catches consonants fast, releases smoothly.
+  - Sibilance enhancement path: 4 kHz HPF detects S/T/F/SH energy in the
+    dry voice; injects proportional high-passed noise into the output.
+    Amount: 25% Classic, 18% Modern.
+- Peak output level exposed as `std::atomic<float> outputLevelDb` for VU meter.
+- AU validation: passes `auval -v aufx Plg2 SmPy`. Logic Pro loads correctly.
+
+### GUI — COMPLETE AND CONFIRMED WORKING
+- Full custom GUI matching `mockup/gui_mockup.html` (visual source of truth).
+- `PluginLookAndFeel`: two-layer rotary knobs — outer rim linear-gradient
+  (155°), inner dial radial-gradient at 38%/32% highlight, PolyBLEP-aware
+  needle with per-mode glow (amber Classic; mint/sky/peach Modern), ambient
+  glow pool below each knob.
+- Four knobs in Controls section (80px, 4-column): STRENGTH / PITCH /
+  DRY-WET / OUTPUT.
+- `CharacterToggle`, `VuMeter` (28-LED bar reading live audio level),
+  styled header, footer with power LED + Snell Roundhand script signature,
+  section panels, IO row, status sticker, holographic stickers.
+
+### Plugin identity
+- Manufacturer: Smith-Pye Audio. Bundle: com.smithpyeaudio.projectplugin.
+- AU codes: aufx / Plg2 / SmPy. DO NOT change these — every change forces
+  Logic Pro to treat it as a new plugin, losing saved project state.
+- Installed to: `~/Library/Audio/Plug-Ins/Components/Project PlugIn.component`
+
+### Known gaps / next steps
+- Output level normalisation — vocoded signal level is unpredictable across
+  pitch/character settings; needs makeup gain after band summation.
+- VU meter has no peak-hold or falloff animation (shows raw live level only).
+- No preset system yet (important for commercial release).
+- Release build not yet made — all testing on Debug builds.
+- Apple Developer signing not yet set up (needs £79/year account).
+
+### RESOLVED: Logic Pro manufacturer name
 - RESOLVED: Logic Pro was persistently showing the plugin's manufacturer as
   the old placeholder "YourCompanyName" instead of "Smith-Pye Audio", even
   though the installed binary/Info.plist on disk were confirmed correct, and
